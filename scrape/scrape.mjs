@@ -114,34 +114,36 @@ function parseLivewireComp(text) {
   const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
   const joined = lines.join('\n');
 
-  // Price: derive from "Tickets Total: £T" + "Add N tickets to basket" (robust to banners).
+  const iwStart0 = lines.findIndex((l) => /^Instant Win/i.test(l));
+  const iwBoundary = iwStart0 >= 0 ? iwStart0 : lines.length;
+
+  // Price: several layouts across the platform's themes.
   let price = 0;
-  const totalM = joined.match(/Tickets Total:\s*£\s*([\d.]+)/i);
+  const totalM = joined.match(/Tickets Total:\s*£\s*([\d.]+)/i);   // "Tickets Total: £3.00"
   const addM = joined.match(/Add\s+(\d+)\s+tickets?\s+to\s+basket/i);
   if (totalM && addM && +addM[1] > 0) price = +totalM[1] / +addM[1];
   if (!price) {
-    // Fallback: first small standalone £ amount (avoid comma-thousands banners).
-    const pm = joined.match(/(?:^|\n)£\s*(\d{1,2}\.\d{2})(?:\n|$)/);
+    const perM = joined.match(/£\s*([\d]+(?:\.\d{1,2})?)\s*(?:per|\/)\s*(?:ticket|entry)/i); // "£1.00 Per Ticket"
+    if (perM) price = +perM[1];
+  }
+  if (!price) {
+    const pm = joined.match(/(?:^|\n)£\s*(\d{1,2}\.\d{2})(?:\n|$)/); // standalone small £ amount
     if (pm) price = +pm[1];
   }
 
-  // Tickets: the "sold/total" line near "% Sold".
+  // Tickets: take the largest "A/B" ratio that appears BEFORE the instant-win
+  // section (that's sold/total; instant-win "A/B Found" ratios come later).
   let ticketsSold = 0, totalTickets = 0;
-  const soldIdx = lines.findIndex((l) => /%\s*Sold/i.test(l));
-  const scanFrom = soldIdx >= 0 ? soldIdx : 0;
-  for (let i = scanFrom; i < Math.min(lines.length, scanFrom + 6); i++) {
+  for (let i = 0; i < iwBoundary; i++) {
     const m = lines[i].match(/^([\d,]+)\s*\/\s*([\d,]+)$/);
-    if (m) { ticketsSold = +m[1].replace(/,/g, ''); totalTickets = +m[2].replace(/,/g, ''); break; }
-  }
-  if (!totalTickets) {
-    // Fallback via "% Sold" percentage if the ratio line wasn't found.
-    const pctM = joined.match(/([\d.]+)%\s*Sold/i);
-    if (pctM) { /* leave totals 0 — nothing reliable to anchor on */ }
+    if (!m) continue;
+    const sold = +m[1].replace(/,/g, ''), total = +m[2].replace(/,/g, '');
+    if (total > totalTickets && total >= sold) { ticketsSold = sold; totalTickets = total; }
   }
 
   // Instant wins: prize lines optionally followed by "A/B Found".
   let iwTotal = 0, iwClaimed = 0, iwRemainingValue = 0, iwSeen = 0;
-  const iwStart = lines.findIndex((l) => /^Instant Win/i.test(l));
+  const iwStart = iwStart0;
   if (iwStart >= 0) {
     for (let i = iwStart + 1; i < lines.length; i++) {
       const pm = lines[i].match(/^£\s*([\d,]+(?:\.\d+)?)\s*(?:CASH|CREDIT|VOUCHER)?$/i)
