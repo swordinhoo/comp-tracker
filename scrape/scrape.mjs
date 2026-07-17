@@ -176,6 +176,18 @@ function parseLivewireComp(text) {
   };
 }
 
+// Some sites sit behind Cloudflare's "Just a moment…" JS challenge. A real
+// browser usually clears it in a few seconds — poll the title until it changes
+// (or give up; the site then simply reports no comps).
+async function passCloudflare(page) {
+  for (let i = 0; i < 6; i++) {
+    const title = await page.title().catch(() => '');
+    if (!/just a moment|attention required|checking your browser/i.test(title)) return true;
+    await page.waitForTimeout(3000);
+  }
+  return false;
+}
+
 async function scrapeLivewireSite(browser, site) {
   const ctx = await browser.newContext({ userAgent: UA, viewport: { width: 390, height: 844 }, locale: 'en-GB' });
   const page = await ctx.newPage();
@@ -195,6 +207,7 @@ async function scrapeLivewireSite(browser, site) {
   try {
     await page.goto(site.url, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
     await page.waitForTimeout(4000);
+    await passCloudflare(page);
     if (supabaseRows) {
       await ctx.close();
       return supabaseRows.filter((r) => r && r.id && r.total_tickets > 0).map((r) => fromSupabaseRow(site.key, r));
