@@ -222,6 +222,7 @@ async function scrapeLivewireSite(browser, site) {
   const page = await ctx.newPage();
   const comps = [];
   let supabaseRows = null;
+  let blocked = false;
 
   // Bonus: if this "Livewire" site is secretly Supabase, grab that instead.
   page.on('response', async (res) => {
@@ -242,7 +243,7 @@ async function scrapeLivewireSite(browser, site) {
     await page.waitForTimeout(2500);
     if (supabaseRows) {
       await ctx.close();
-      return supabaseRows.filter((r) => r && r.id && r.total_tickets > 0).map((r) => fromSupabaseRow(site.key, r));
+      return { comps: supabaseRows.filter((r) => r && r.id && r.total_tickets > 0).map((r) => fromSupabaseRow(site.key, r)), blocked: false };
     }
     // Same-origin competition links only (avoids cookie-banner / social / external links).
     const host = new URL(site.url).hostname.replace(/^www\./, '');
@@ -261,6 +262,7 @@ async function scrapeLivewireSite(browser, site) {
         await page.waitForTimeout(SETTLE_MS);
         const text = await page.evaluate(() => document.body.innerText);
         const title = await page.evaluate(() => (document.querySelector('h1') || {}).innerText || document.title);
+        if (/you have been blocked|attention required|just a moment|unable to access/i.test(text.slice(0, 400))) { blocked = true; continue; }
         if (/page not found|404/i.test(title) || isJunkTitle(title)) continue;
         const parsed = parseLivewireComp(text);
         if (!parsed.price || !parsed.totalTickets) continue; // need a real paid comp
@@ -282,9 +284,14 @@ async function scrapeLivewireSite(browser, site) {
         });
       } catch { /* skip this comp */ }
     }
+    // Homepage itself blocked (no comp links found and page shows a block wall).
+    if (!comps.length && !compLinks.length) {
+      const homeText = await page.evaluate(() => document.body.innerText).catch(() => '');
+      if (/you have been blocked|attention required|just a moment|unable to access/i.test(homeText.slice(0, 400))) blocked = true;
+    }
   } catch { /* site-level failure */ }
   await ctx.close();
-  return comps;
+  return { comps, blocked };
 }
 
 /* ---------- Orchestration ---------- */
@@ -314,10 +321,10 @@ async function worker() {
   while (idx < livewireSites.length) {
     const site = livewireSites[idx++];
     try {
-      const comps = await scrapeLivewireSite(browser, site);
+      const { comps, blocked } = await scrapeLivewireSite(browser, site);
       const platform = comps[0]?.source?.type === 'supabase' ? 'rafflex/supabase' : 'rafflex/livewire';
-      console.log(`${site.name}: ${platform} — ${comps.length} comps`);
-      siteMeta.push({ key: site.key, name: site.name, url: site.url, platform, error: comps.length ? null : 'no comps parsed', compCount: comps.length });
+      console.log(`${site.name}: ${platform} — ${comps.length} comps${blocked ? ' (blocked)' : ''}`);
+      siteMeta.push({ key: site.key, name: site.name, url: site.url, platform, error: comps.length ? null : (blocked ? 'blocked by Cloudflare' : 'no comps parsed'), compCount: comps.length });
       allComps.push(...comps);
     } catch (err) {
       console.log(`${site.name}: ERROR ${err.message}`);
