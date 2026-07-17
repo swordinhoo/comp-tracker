@@ -126,7 +126,9 @@ function parseLivewireComp(text) {
   const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
   const joined = lines.join('\n');
 
-  const iwStart0 = lines.findIndex((l) => /^Instant Win/i.test(l));
+  // Anchor to the "Instant Wins" prize header — NOT the "Instant Winners" recent-
+  // winners feed some sites show above the ticket counter.
+  const iwStart0 = lines.findIndex((l) => /^instant wins\b/i.test(l) && !/winners/i.test(l));
   const iwBoundary = iwStart0 >= 0 ? iwStart0 : lines.length;
 
   // Price: several layouts across the platform's themes.
@@ -159,13 +161,13 @@ function parseLivewireComp(text) {
   const iwStart = iwStart0;
   if (iwStart >= 0) {
     for (let i = iwStart + 1; i < lines.length; i++) {
-      const pm = lines[i].match(/^£\s*([\d,]+(?:\.\d+)?)\s*(?:CASH|CREDIT|VOUCHER)?$/i)
-             || lines[i].match(/^(\d+)p\s*(?:CASH|CREDIT)?$/i);
-      if (!pm) continue;
-      const value = /p\s*(CASH|CREDIT)?$/i.test(lines[i]) && !lines[i].includes('£')
-        ? +pm[1] / 100
-        : +pm[1].replace(/,/g, '');
-      if (!(value > 0)) continue;
+      // Prize lines vary: "£3000 CASH", "£900 Cash!", "50p CREDIT", "£25 Site Credit".
+      // Tolerate a trailing label and punctuation.
+      let value = null;
+      let m = lines[i].match(/^£\s*([\d,]+(?:\.\d+)?)\s*(?:cash|credit|voucher|site\s*credit)?[\s!.,-]*$/i);
+      if (m) value = +m[1].replace(/,/g, '');
+      else { m = lines[i].match(/^(\d+)\s*p\b\s*(?:cash|credit|voucher)?[\s!.,-]*$/i); if (m) value = +m[1] / 100; }
+      if (value == null || !(value > 0)) continue;
       iwSeen++;
       // Look at the next line for a "A/B Found" counter.
       const fm = (lines[i + 1] || '').match(/^(\d+)\s*\/\s*(\d+)\s*Found$/i);
@@ -233,15 +235,27 @@ async function scrapeLivewireSite(browser, site) {
 
   try {
     await page.goto(site.url, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
-    await page.waitForTimeout(4000);
     await passCloudflare(page);
+    await page.waitForTimeout(5000);
+    // Scroll to trigger any lazy-rendered competition cards, then let them settle.
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight)).catch(() => {});
+    await page.waitForTimeout(2500);
     if (supabaseRows) {
       await ctx.close();
       return supabaseRows.filter((r) => r && r.id && r.total_tickets > 0).map((r) => fromSupabaseRow(site.key, r));
     }
-    const links = await page.$$eval('a[href*="/competition"], a[href*="/product"]',
-      (as) => [...new Set(as.map((a) => a.href))].filter((h) => !/\/(category|tag|page|about|faq|terms|winner)/i.test(h)));
-    for (const url of links.slice(0, MAX_COMPS_PER_SITE)) {
+    // Same-origin competition links only (avoids cookie-banner / social / external links).
+    const host = new URL(site.url).hostname.replace(/^www\./, '');
+    const links = await page.$$eval('a[href]', (as) => as.map((a) => a.href));
+    const compLinks = [...new Set(links)].filter((h) => {
+      try {
+        const u = new URL(h);
+        return u.hostname.replace(/^www\./, '').endsWith(host)
+          && /\/(competition|competitions|product|raffle|comp|draw)s?\//i.test(u.pathname)
+          && !/\/(category|tag|page|about|faq|terms|winner|basket|cart|account|checkout|policy|privacy)/i.test(u.pathname);
+      } catch { return false; }
+    });
+    for (const url of compLinks.slice(0, MAX_COMPS_PER_SITE)) {
       try {
         await page.goto(url, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
         await page.waitForTimeout(SETTLE_MS);
