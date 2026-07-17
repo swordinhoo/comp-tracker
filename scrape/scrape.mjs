@@ -66,7 +66,19 @@ function fromSupabaseRow(siteKey, row) {
       claimed: foundWins,
       remaining: totalWins - foundWins,
       remainingValue,
+      totalValue: row.iw_total_value ?? prizes.reduce((n, p) => n + (p.total_value ?? (p.qty || 0) * (p.unit_value || 0)), 0),
+      // Prize structure: each tier's value and how many exist / found.
+      prizes: prizes.map((p) => ({ name: p.name, value: p.unit_value, qty: p.qty, found: p.found || 0 })),
       exact: true,
+    },
+    // Structure/margin fields for the analysis app.
+    structure: {
+      exact: true,
+      selloutRevenue: (Number(row.ticket_price) || 0) * (row.total_tickets || 0),
+      iwPoolValue: row.iw_total_value ?? 0,
+      endPrizeValue: row.end_prize_value || 0,
+      rtpIwOnly: row.rtp_iw_only ?? null,       // operator's instant-win payout %
+      rtpWithEnd: row.rtp_with_end ?? null,     // payout % including the end prize
     },
     source: { type: 'supabase', buyoutCost: row.buyout_cost, rtpIwOnly: row.rtp_iw_only, soldPct: row.sold_pct },
   };
@@ -142,7 +154,8 @@ function parseLivewireComp(text) {
   }
 
   // Instant wins: prize lines optionally followed by "A/B Found".
-  let iwTotal = 0, iwClaimed = 0, iwRemainingValue = 0, iwSeen = 0;
+  let iwTotal = 0, iwClaimed = 0, iwRemainingValue = 0, iwPoolValue = 0, iwSeen = 0;
+  const tiers = [];
   const iwStart = iwStart0;
   if (iwStart >= 0) {
     for (let i = iwStart + 1; i < lines.length; i++) {
@@ -156,14 +169,12 @@ function parseLivewireComp(text) {
       iwSeen++;
       // Look at the next line for a "A/B Found" counter.
       const fm = (lines[i + 1] || '').match(/^(\d+)\s*\/\s*(\d+)\s*Found$/i);
-      if (fm) {
-        const found = +fm[1], qty = +fm[2];
-        iwTotal += qty; iwClaimed += found;
-        iwRemainingValue += Math.max(0, qty - found) * value;
-      } else {
-        // Top prize with no counter — assume single and still available.
-        iwTotal += 1; iwRemainingValue += value;
-      }
+      const qty = fm ? +fm[2] : 1;
+      const found = fm ? +fm[1] : 0;
+      iwTotal += qty; iwClaimed += found;
+      iwRemainingValue += Math.max(0, qty - found) * value;
+      iwPoolValue += qty * value;
+      tiers.push({ value, qty, found });
     }
   }
 
@@ -171,11 +182,25 @@ function parseLivewireComp(text) {
     price: Math.round(price * 100) / 100,
     totalTickets, ticketsSold,
     closesAt: parseDrawDate(joined),
+    iwPoolValue: Math.round(iwPoolValue * 100) / 100,
+    tiers,
     instantWins: iwSeen ? {
       total: iwTotal, claimed: iwClaimed, remaining: iwTotal - iwClaimed,
-      remainingValue: Math.round(iwRemainingValue * 100) / 100, exact: false,
-    } : { total: null, claimed: null, remaining: null, remainingValue: null, exact: false },
+      remainingValue: Math.round(iwRemainingValue * 100) / 100,
+      totalValue: Math.round(iwPoolValue * 100) / 100,
+      prizes: tiers, exact: false,
+    } : { total: null, claimed: null, remaining: null, remainingValue: null, totalValue: null, prizes: [], exact: false },
   };
+}
+
+// Best-effort main-prize value from a competition title, e.g. "£20,000 For £1"
+// or "£48,000 TAX FREE CASH". Returns the largest cash figure, or null (non-cash
+// prizes like cars can't be valued from the title).
+function mainPrizeFromTitle(title) {
+  const amounts = [...String(title).matchAll(/£\s*([\d][\d,]*(?:\.\d+)?)\s*(k|,000)?/gi)]
+    .map((m) => (m[2] && m[2].toLowerCase() === 'k' ? +m[1].replace(/,/g, '') * 1000 : +m[1].replace(/,/g, '')))
+    .filter((n) => n >= 10); // ignore "£1" ticket-teaser figures
+  return amounts.length ? Math.max(...amounts) : null;
 }
 
 // Some sites sit behind Cloudflare's "Just a moment…" JS challenge. A real
@@ -226,11 +251,20 @@ async function scrapeLivewireSite(browser, site) {
         const parsed = parseLivewireComp(text);
         if (!parsed.price || !parsed.totalTickets) continue; // need a real paid comp
         const slug = url.split('/').filter(Boolean).pop();
+        const mainPrize = mainPrizeFromTitle(title);
         comps.push({
           id: `${site.key}:${slug}`, siteKey: site.key, title: title.trim(), url,
           price: parsed.price, totalTickets: parsed.totalTickets, ticketsSold: parsed.ticketsSold,
-          maxPerPerson: null, closesAt: parsed.closesAt, endPrize: null,
-          instantWins: parsed.instantWins, source: { type: 'livewire-dom' },
+          maxPerPerson: null, closesAt: parsed.closesAt,
+          endPrize: mainPrize ? { desc: 'Main prize (from title)', value: mainPrize, cashValue: mainPrize } : null,
+          instantWins: parsed.instantWins,
+          structure: {
+            exact: false,
+            selloutRevenue: Math.round(parsed.price * parsed.totalTickets * 100) / 100,
+            iwPoolValue: parsed.iwPoolValue,
+            endPrizeValue: mainPrize || 0,
+          },
+          source: { type: 'livewire-dom' },
         });
       } catch { /* skip this comp */ }
     }
