@@ -79,7 +79,15 @@ async function scrapeSupabase(siteKey, cfg) {
   });
   if (!res.ok) throw new Error(`supabase ${res.status}`);
   const rows = await res.json();
-  return rows.filter((r) => r && r.id && r.total_tickets > 0).map((r) => fromSupabaseRow(siteKey, r));
+  return rows
+    .filter((r) => r && r.id && r.total_tickets > 0 && r.ticket_price > 0 && !isJunkTitle(r.name))
+    .map((r) => fromSupabaseRow(siteKey, r));
+}
+
+// Operators leave test/placeholder comps live (£0 price, "test", "welcome" etc.).
+// They can't have EV/buyout maths, so keep them out of the feed.
+function isJunkTitle(title) {
+  return /\b(test|welcome|check the desc|demo|template|example)\b/i.test(title || '');
 }
 
 /* ---------- Livewire path (estimated) ---------- */
@@ -199,9 +207,9 @@ async function scrapeLivewireSite(browser, site) {
         await page.waitForTimeout(SETTLE_MS);
         const text = await page.evaluate(() => document.body.innerText);
         const title = await page.evaluate(() => (document.querySelector('h1') || {}).innerText || document.title);
-        if (/page not found|404/i.test(title)) continue;
+        if (/page not found|404/i.test(title) || isJunkTitle(title)) continue;
         const parsed = parseLivewireComp(text);
-        if (!parsed.totalTickets && !parsed.price) continue; // nothing usable
+        if (!parsed.price || !parsed.totalTickets) continue; // need a real paid comp
         const slug = url.split('/').filter(Boolean).pop();
         comps.push({
           id: `${site.key}:${slug}`, siteKey: site.key, title: title.trim(), url,
