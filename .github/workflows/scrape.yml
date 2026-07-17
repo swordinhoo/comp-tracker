@@ -1,0 +1,51 @@
+name: Scrape competitions
+
+on:
+  schedule:
+    - cron: '*/20 * * * *' # every 20 minutes
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scrape/scrape.mjs
+      - probe/sites.json
+      - .github/workflows/scrape.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Scrape
+        run: node scrape/scrape.mjs
+
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/comps.json
+          git commit -m "Update competition data" || { echo "no changes"; exit 0; }
+          git pull --rebase --autostash origin main || true
+          git push origin HEAD:main

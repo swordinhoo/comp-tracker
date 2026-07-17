@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f14">
+<title>Comp Tracker</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<style>
+  :root {
+    --bg: #0b0f14; --panel: #121a23; --panel2: #1a2530; --line: #24313f;
+    --text: #e8eef4; --dim: #8fa2b3; --faint: #5d7080;
+    --green: #22d37f; --green-dim: rgba(34,211,127,.14);
+    --amber: #f2b636; --amber-dim: rgba(242,182,54,.14);
+    --red: #f2556a; --red-dim: rgba(242,85,106,.14);
+    --blue: #4aa3ff;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+  button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+  a { color: var(--blue); text-decoration: none; }
+
+  header {
+    position: sticky; top: 0; z-index: 30; background: rgba(11,15,20,.92);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+    padding: calc(10px + env(safe-area-inset-top)) 14px 8px;
+  }
+  .hrow { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  h1 { font-size: 17px; letter-spacing: .3px; }
+  h1 .accent { color: var(--green); }
+  .updated { font-size: 11px; color: var(--faint); margin-top: 2px; }
+  .updated.sample { color: var(--amber); }
+  #refreshBtn { font-size: 18px; padding: 6px 10px; border-radius: 10px; background: var(--panel); border: 1px solid var(--line); }
+  #refreshBtn.spin { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0 2px; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto; padding: 5px 12px; border-radius: 999px; font-size: 12.5px;
+    background: var(--panel); border: 1px solid var(--line); color: var(--dim); white-space: nowrap;
+  }
+  .chip.on { background: var(--green-dim); border-color: var(--green); color: var(--green); }
+
+  main { padding: 12px 12px 24px; max-width: 640px; margin: 0 auto; }
+  .empty { text-align: center; color: var(--faint); padding: 48px 20px; font-size: 14px; }
+
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 12px 14px; margin-bottom: 10px; position: relative;
+  }
+  .card.buyout-live { border-color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+  .card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .card .title { font-weight: 600; font-size: 14.5px; line-height: 1.3; padding-right: 4px; }
+  .sitebadge { font-size: 10.5px; color: var(--dim); background: var(--panel2); border-radius: 6px; padding: 2px 7px; display: inline-block; margin-bottom: 5px; }
+  .star { font-size: 18px; color: var(--faint); padding: 2px 4px; flex: 0 0 auto; }
+  .star.on { color: var(--amber); }
+
+  .meterwrap { margin: 9px 0 7px; }
+  .meter { height: 6px; border-radius: 4px; background: var(--panel2); overflow: hidden; }
+  .meter > div { height: 100%; background: var(--blue); border-radius: 4px; }
+  .meter.hot > div { background: var(--amber); }
+  .metertext { display: flex; justify-content: space-between; font-size: 11px; color: var(--dim); margin-top: 3px; }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .stat { font-size: 11.5px; padding: 3px 9px; border-radius: 8px; background: var(--panel2); color: var(--dim); }
+  .stat b { color: var(--text); font-weight: 600; }
+  .stat.ev-pos { background: var(--green-dim); color: var(--green); }
+  .stat.ev-pos b { color: var(--green); }
+  .stat.ev-neg { background: var(--red-dim); color: var(--red); }
+  .stat.ev-neg b { color: var(--red); }
+  .stat.warn { background: var(--amber-dim); color: var(--amber); }
+  .stat.warn b { color: var(--amber); }
+  .buyoutflag {
+    margin-top: 9px; font-size: 12.5px; font-weight: 700; color: var(--green);
+    background: var(--green-dim); border: 1px dashed var(--green); border-radius: 9px; padding: 7px 10px;
+  }
+
+  nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
+    display: flex; background: rgba(11,15,20,.96); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom);
+  }
+  nav button { flex: 1; padding: 9px 0 7px; font-size: 11px; color: var(--faint); }
+  nav button .ico { display: block; font-size: 19px; margin-bottom: 1px; }
+  nav button.on { color: var(--green); }
+  nav button .badge {
+    position: absolute; transform: translate(14px, -4px); background: var(--green); color: #06281a;
+    font-size: 10px; font-weight: 700; border-radius: 999px; padding: 0 5px; min-width: 16px;
+  }
+
+  /* Detail sheet */
+  #sheet {
+    position: fixed; inset: 0; z-index: 40; background: var(--bg); overflow-y: auto;
+    display: none; padding-bottom: 40px;
+  }
+  #sheet.open { display: block; }
+  .sheethead {
+    position: sticky; top: 0; background: rgba(11,15,20,.95); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line); padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .sheethead button { font-size: 22px; color: var(--dim); }
+  .sheethead .t { font-size: 15px; font-weight: 600; line-height: 1.25; }
+  .section { margin: 14px 12px 0; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 13px 14px; max-width: 616px; }
+  @media (min-width: 660px) { .section { margin-left: auto; margin-right: auto; } }
+  .section h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .8px; color: var(--faint); margin-bottom: 9px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cell { background: var(--panel2); border-radius: 10px; padding: 8px 10px; }
+  .cell .k { font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: .5px; }
+  .cell .v { font-size: 15px; font-weight: 650; margin-top: 1px; }
+  .cell .v.green { color: var(--green); } .cell .v.red { color: var(--red); } .cell .v.amber { color: var(--amber); }
+  .note { font-size: 11.5px; color: var(--faint); margin-top: 8px; line-height: 1.45; }
+  .rowline { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+  .rowline:last-child { border-bottom: none; }
+  .rowline .k { color: var(--dim); }
+  .rowline .v { font-weight: 600; }
+  input[type=range] { width: 100%; accent-color: var(--green); margin: 6px 0 2px; }
+  input[type=number], input[type=password] {
+    width: 100%; background: var(--panel2); border: 1px solid var(--line); color: var(--text);
+    border-radius: 10px; padding: 9px 12px; font-size: 15px;
+  }
+  .btn {
+    display: block; width: 100%; text-align: center; padding: 12px; border-radius: 12px;
+    font-weight: 700; font-size: 14.5px; margin-top: 10px;
+  }
+  .btn.green { background: var(--green); color: #06281a; }
+  .btn.outline { border: 1px solid var(--line); color: var(--text); background: var(--panel2); }
+
+  /* PIN gate */
+  #gate { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: flex; align-items: center; justify-content: center; }
+  #gate .box { width: min(320px, 86vw); text-align: center; }
+  #gate h2 { font-size: 18px; margin-bottom: 4px; }
+  #gate p { color: var(--faint); font-size: 12.5px; margin-bottom: 16px; }
+  #gate .err { color: var(--red); font-size: 12.5px; margin-top: 10px; min-height: 16px; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <div style="font-size:40px;margin-bottom:10px">🎯</div>
+    <h2>Comp Tracker</h2>
+    <p>Enter PIN to open the tracker</p>
+    <input type="password" id="pinInput" inputmode="numeric" autocomplete="off" placeholder="PIN">
+    <button class="btn green" id="pinBtn">Unlock</button>
+    <div class="err" id="pinErr"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header>
+    <div class="hrow">
+      <div>
+        <h1>Comp <span class="accent">Tracker</span></h1>
+        <div class="updated" id="updated">loading…</div>
+      </div>
+      <button id="refreshBtn" title="Refresh data">↻</button>
+    </div>
+    <div class="chips" id="sortChips"></div>
+    <div class="chips" id="siteChips"></div>
+  </header>
+
+  <main id="list"></main>
+
+  <nav>
+    <button data-view="feed" class="on"><span class="ico">📋</span>Feed</button>
+    <button data-view="buyouts" id="navBuyouts"><span class="ico">💰</span>Buyouts</button>
+    <button data-view="watch"><span class="ico">⭐</span>Watch</button>
+    <button data-view="sites"><span class="ico">🌐</span>Sites</button>
+  </nav>
+
+  <div id="sheet"></div>
+</div>
+
+<script>
+'use strict';
+/* ============ config ============ */
+const PIN = '8426';
+const DATA_URL = 'data/comps.json';
+const fmtGBP = (n, dp) => '£' + Number(n).toLocaleString('en-GB', { minimumFractionDigits: dp ?? (Math.abs(n) < 100 ? 2 : 0), maximumFractionDigits: dp ?? (Math.abs(n) < 100 ? 2 : 0) });
+const pct = (n) => (n * 100).toFixed(n * 100 < 10 ? 1 : 0) + '%';
+
+/* ============ sample data (used until the scraper's comps.json exists) ============ */
+const SAMPLE = {
+  updatedAt: null,
+  sample: true,
+  sites: [
+    { key: 'odp', name: 'ODP Competitions', url: 'https://odpcompetitions.com/' },
+    { key: 'skyline', name: 'Skyline Comps', url: 'https://skylinecomps.co.uk/' },
+    { key: 'carley', name: 'Carley Comps', url: 'https://carleycomps.co.uk/' },
+    { key: 'dd', name: 'DD Competitions', url: 'https://www.ddcompetitions.com/' },
+    { key: 'epic', name: 'Epic Competitions', url: 'https://epiccompetitions.co.uk/' },
+    { key: 'easybigwins', name: 'Easy Big Wins', url: 'https://www.easybigwins.co.uk/' },
+    { key: 'rys', name: "Ry's Competitions", url: 'https://www.ryscompetitions.com/' },
+    { key: 'redlemonx', name: 'Red Lemon X', url: 'https://www.redlemonx.co.uk/' },
+    { key: 'jetcomps', name: 'Jet Comps', url: 'https://www.jetcomps.co.uk/' },
+    { key: 'caledonia', name: 'Caledonia Competitions', url: 'https://caledoniacompetitions.co.uk/' },
+    { key: 'luckypup', name: 'Lucky Pup Prizes', url: 'https://luckypupprizes.co.uk/' }
+  ],
+  comps: [
+    {
+      id: 'demo-1', siteKey: 'caledonia', title: '£10,000 CASH INSTANT WINS — DEMO',
+      url: 'https://caledoniacompetitions.co.uk/', price: 0.99,
+      totalTickets: 15000, ticketsSold: 14300, maxPerPerson: 500,
+      closesAt: hoursFromNow(9),
+      endPrize: { desc: '£1,000 end prize', value: 1000, cashValue: 1000 },
+      instantWins: { total: 120, claimed: 112, remaining: 8, remainingValue: 1150, exact: true }
+    },
+    {
+      id: 'demo-2', siteKey: 'dd', title: 'PS5 PRO + 500 INSTANT WINS — DEMO',
+      url: 'https://www.ddcompetitions.com/', price: 1.49,
+      totalTickets: 20000, ticketsSold: 6200, maxPerPerson: 1000,
+      closesAt: hoursFromNow(70),
+      endPrize: { desc: 'PS5 Pro bundle', value: 800, cashValue: 650 },
+      instantWins: { total: 500, claimed: 130, remaining: 370, remainingValue: 4900, exact: false }
+    },
+    {
+      id: 'demo-3', siteKey: 'rys', title: '£500 SITE CREDIT SPINNER — DEMO',
+      url: 'https://www.ryscompetitions.com/', price: 0.25,
+      totalTickets: 40000, ticketsSold: 39100, maxPerPerson: 250,
+      closesAt: hoursFromNow(3),
+      endPrize: { desc: '£500 cash', value: 500, cashValue: 500 },
+      instantWins: { total: 300, claimed: 297, remaining: 3, remainingValue: 90, exact: true }
+    }
+  ]
+};
+function hoursFromNow(h) { return new Date(Date.now() + h * 3600e3).toISOString(); }
+
+/* ============ EV engine ============ */
+function endCash(c) { return (c.endPrize && (c.endPrize.cashValue ?? c.endPrize.value)) || 0; }
+
+function iwRemainingValue(c) {
+  const iw = c.instantWins;
+  if (!iw) return { value: 0, exact: true };
+  if (iw.exact) return { value: iw.remainingValue || 0, exact: true };
+  // Estimate: unclaimed value scales with the share of tickets still unsold.
+  const est = iw.remainingValue != null
+    ? iw.remainingValue
+    : (iw.totalValue || 0) * (ticketsRemaining(c) / Math.max(1, c.totalTickets));
+  return { value: est, exact: false };
+}
+
+function ticketsRemaining(c) { return Math.max(0, (c.totalTickets || 0) - (c.ticketsSold || 0)); }
+
+function evPerTicket(c) {
+  const N = ticketsRemaining(c), T = c.totalTickets || 0, p = c.price || 0;
+  if (!N || !T) return { ev: -p, exact: true };
+  const iw = iwRemainingValue(c);
+  return { ev: iw.value / N + endCash(c) / T - p, exact: iw.exact };
+}
+
+function buyout(c) {
+  const N = ticketsRemaining(c), T = c.totalTickets || 0, p = c.price || 0;
+  const iw = iwRemainingValue(c);
+  const cost = N * p;
+  const endShare = T ? (N / T) * endCash(c) : 0;
+  return {
+    N, cost,
+    guaranteed: iw.value, exact: iw.exact,
+    endShare,
+    guaranteedMargin: iw.value - cost,        // profit floor: instant wins alone vs cost
+    expectedMargin: iw.value + endShare - cost // adds expected end-prize share
+  };
+}
+
+function syndicate(c) {
+  const N = ticketsRemaining(c);
+  const cap = Math.min(c.maxPerPerson || N, N) || N;
+  const people = Math.max(1, Math.ceil(N / cap));
+  const b = buyout(c);
+  return {
+    cap, people,
+    perHeadCost: b.cost / people,
+    perHeadFloor: b.guaranteedMargin / people,
+    perHeadExpected: b.expectedMargin / people
+  };
+}
+
+// P(at least one instant win with k tickets) — exact hypergeometric via product.
+function probAtLeastOne(N, W, k) {
+  if (W <= 0 || N <= 0) return 0;
+  if (k >= N - W + 1) return 1;
+  let miss = 1;
+  for (let i = 0; i < k; i++) miss *= (N - W - i) / (N - i);
+  return 1 - miss;
+}
+
+function hoursLeft(c) { return c.closesAt ? (new Date(c.closesAt) - Date.now()) / 3600e3 : Infinity; }
+function fmtCountdown(c) {
+  const h = hoursLeft(c);
+  if (!isFinite(h)) return 'no close time';
+  if (h < 0) return 'closed';
+  if (h < 1) return Math.round(h * 60) + 'm left';
+  if (h < 48) return Math.round(h) + 'h left';
+  return Math.round(h / 24) + 'd left';
+}
+
+/* ============ state ============ */
+let DATA = null;
+let view = 'feed';
+let sortBy = localStorage.getItem('ct-sort') || 'ev';
+let siteFilter = 'all';
+const watchlist = new Set(JSON.parse(localStorage.getItem('ct-watch') || '[]'));
+
+const SORTS = [
+  ['ev', 'Best EV'],
+  ['buyout', 'Buyout £'],
+  ['closing', 'Closing soon'],
+  ['sold', '% Sold'],
+  ['new', 'Newest']
+];
+
+/* ============ data load ============ */
+async function loadData(manual) {
+  const btn = document.getElementById('refreshBtn');
+  btn.classList.add('spin');
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    DATA = await res.json();
+  } catch (err) {
+    if (!DATA) DATA = SAMPLE;
+    if (manual) console.warn('Data fetch failed, using previous/sample data:', err);
+  }
+  btn.classList.remove('spin');
+  render();
+}
+
+/* ============ rendering ============ */
+function siteOf(key) { return (DATA.sites || []).find((s) => s.key === key) || { name: key, url: '#' }; }
+
+function visibleComps() {
+  let comps = (DATA.comps || []).filter((c) => hoursLeft(c) > 0 || !c.closesAt);
+  if (siteFilter !== 'all') comps = comps.filter((c) => c.siteKey === siteFilter);
+  if (view === 'watch') comps = comps.filter((c) => watchlist.has(c.id));
+  if (view === 'buyouts') comps = comps.filter((c) => buyout(c).guaranteedMargin > 0);
+  const sorters = {
+    ev: (a, b) => evPerTicket(b).ev - evPerTicket(a).ev,
+    buyout: (a, b) => buyout(b).guaranteedMargin - buyout(a).guaranteedMargin,
+    closing: (a, b) => hoursLeft(a) - hoursLeft(b),
+    sold: (a, b) => (b.ticketsSold / b.totalTickets || 0) - (a.ticketsSold / a.totalTickets || 0),
+    new: (a, b) => new Date(b.firstSeen || 0) - new Date(a.firstSeen || 0)
+  };
+  return comps.sort(sorters[sortBy] || sorters.ev);
+}
+
+function compCard(c) {
+  const N = ticketsRemaining(c);
+  const soldPct = c.totalTickets ? c.ticketsSold / c.totalTickets : 0;
+  const { ev, exact } = evPerTicket(c);
+  const b = buyout(c);
+  const iw = c.instantWins || {};
+  const site = siteOf(c.siteKey);
+  const evCls = ev > 0 ? 'ev-pos' : 'ev-neg';
+  const estTag = exact ? '' : ' <span style="opacity:.75">(est)</span>';
+  return `
+  <div class="card ${b.guaranteedMargin > 0 && b.exact ? 'buyout-live' : ''}" data-id="${c.id}">
+    <div class="top">
+      <div>
+        <span class="sitebadge">${site.name}</span>
+        <div class="title">${escapeHtml(c.title)}</div>
+      </div>
+      <button class="star ${watchlist.has(c.id) ? 'on' : ''}" data-star="${c.id}">★</button>
+    </div>
+    <div class="meterwrap">
+      <div class="meter ${soldPct > 0.9 ? 'hot' : ''}"><div style="width:${Math.min(100, soldPct * 100)}%"></div></div>
+      <div class="metertext"><span>${pct(soldPct)} sold</span><span>${N.toLocaleString()} left @ ${fmtGBP(c.price, 2)}</span></div>
+    </div>
+    <div class="stats">
+      <span class="stat ${evCls}">EV <b>${(ev >= 0 ? '+' : '') + fmtGBP(ev, 2)}</b>/ticket${estTag}</span>
+      <span class="stat">IW left <b>${iw.remaining ?? '?'}</b> ≈ <b>${fmtGBP(iwRemainingValue(c).value)}</b>${estTag}</span>
+      <span class="stat ${hoursLeft(c) < 6 ? 'warn' : ''}">${fmtCountdown(c)}</span>
+    </div>
+    ${b.guaranteedMargin > 0 ? `<div class="buyoutflag">💰 BUYOUT ${b.exact ? 'LIVE' : 'possible (est)'}: ${b.N.toLocaleString()} tickets = ${fmtGBP(b.cost)} → floor ${fmtGBP(b.guaranteedMargin)} profit</div>` : ''}
+  </div>`;
+}
+
+function render() {
+  // header
+  const upd = document.getElementById('updated');
+  if (DATA.sample) {
+    upd.textContent = 'SAMPLE DATA — scraper not live yet';
+    upd.className = 'updated sample';
+  } else {
+    upd.textContent = 'updated ' + new Date(DATA.updatedAt).toLocaleString('en-GB', { weekday: 'short', hour: '2-digit', minute: '2-digit' });
+    upd.className = 'updated';
+  }
+  // chips
+  document.getElementById('sortChips').innerHTML = SORTS.map(([k, label]) =>
+    `<button class="chip ${sortBy === k ? 'on' : ''}" data-sort="${k}">${label}</button>`).join('');
+  const sites = DATA.sites || [];
+  document.getElementById('siteChips').innerHTML =
+    `<button class="chip ${siteFilter === 'all' ? 'on' : ''}" data-site="all">All sites</button>` +
+    sites.map((s) => `<button class="chip ${siteFilter === s.key ? 'on' : ''}" data-site="${s.key}">${s.name}</button>`).join('');
+  // buyout badge
+  const liveBuyouts = (DATA.comps || []).filter((c) => hoursLeft(c) > 0 && buyout(c).guaranteedMargin > 0).length;
+  document.getElementById('navBuyouts').innerHTML =
+    `${liveBuyouts ? `<span class="badge">${liveBuyouts}</span>` : ''}<span class="ico">💰</span>Buyouts`;
+  // body
+  const list = document.getElementById('list');
+  if (view === 'sites') { list.innerHTML = sitesView(); return; }
+  const comps = visibleComps();
+  list.innerHTML = comps.length ? comps.map(compCard).join('') :
+    `<div class="empty">${view === 'buyouts' ? 'No profitable buyouts right now.\nThey appear here the moment unclaimed instant wins outweigh the cost of every remaining ticket.' : view === 'watch' ? 'Nothing on your watchlist yet — tap ★ on any comp.' : 'No live comps in the data yet.'}</div>`;
+}
+
+function sitesView() {
+  return (DATA.sites || []).map((s) => {
+    const comps = (DATA.comps || []).filter((c) => c.siteKey === s.key && hoursLeft(c) > 0);
+    return `<div class="card">
+      <div class="top"><div><div class="title">${s.name}</div>
+      <div class="note">${comps.length} live comp${comps.length === 1 ? '' : 's'} tracked ${s.platform ? '· ' + s.platform : ''} ${s.error ? '· <span style="color:var(--red)">scrape error</span>' : ''}</div></div>
+      <a href="${s.url}" target="_blank" rel="noopener">open ↗</a></div>
+    </div>`;
+  }).join('');
+}
+
+/* ============ detail sheet ============ */
+function openSheet(id) {
+  const c = (DATA.comps || []).find((x) => x.id === id);
+  if (!c) return;
+  const N = ticketsRemaining(c);
+  const b = buyout(c);
+  const syn = syndicate(c);
+  const iw = c.instantWins || {};
+  const site = siteOf(c.siteKey);
+  const { ev, exact } = evPerTicket(c);
+  const est = exact ? '' : ' (estimated)';
+  const sheet = document.getElementById('sheet');
+  sheet.innerHTML = `
+  <div class="sheethead">
+    <button id="closeSheet">‹</button>
+    <div><span class="sitebadge">${site.name}</span><div class="t">${escapeHtml(c.title)}</div></div>
+  </div>
+
+  <div class="section">
+    <h3>The numbers</h3>
+    <div class="grid">
+      <div class="cell"><div class="k">Ticket price</div><div class="v">${fmtGBP(c.price, 2)}</div></div>
+      <div class="cell"><div class="k">Tickets left</div><div class="v">${N.toLocaleString()} / ${(c.totalTickets || 0).toLocaleString()}</div></div>
+      <div class="cell"><div class="k">Instant wins left</div><div class="v">${iw.remaining ?? '?'} of ${iw.total ?? '?'}</div></div>
+      <div class="cell"><div class="k">Unclaimed IW value${est}</div><div class="v amber">${fmtGBP(iwRemainingValue(c).value)}</div></div>
+      <div class="cell"><div class="k">End prize (cash)</div><div class="v">${fmtGBP(endCash(c))}</div></div>
+      <div class="cell"><div class="k">EV per ticket${est}</div><div class="v ${ev > 0 ? 'green' : 'red'}">${(ev >= 0 ? '+' : '') + fmtGBP(ev, 2)}</div></div>
+      <div class="cell"><div class="k">Closes</div><div class="v">${fmtCountdown(c)}</div></div>
+      <div class="cell"><div class="k">Max per person</div><div class="v">${c.maxPerPerson ? c.maxPerPerson.toLocaleString() : 'unknown'}</div></div>
+    </div>
+    ${exact ? '' : '<div class="note">⚠️ This site doesn\'t publish claimed instant wins, so unclaimed value is estimated from tickets sold. Don\'t buy out on estimates.</div>'}
+  </div>
+
+  <div class="section">
+    <h3>Buyout check</h3>
+    <div class="rowline"><span class="k">Cost of all ${b.N.toLocaleString()} tickets</span><span class="v">${fmtGBP(b.cost)}</span></div>
+    <div class="rowline"><span class="k">Guaranteed instant wins${est}</span><span class="v">${fmtGBP(b.guaranteed)}</span></div>
+    <div class="rowline"><span class="k">Profit floor (IWs − cost)</span><span class="v" style="color:${b.guaranteedMargin > 0 ? 'var(--green)' : 'var(--red)'}">${(b.guaranteedMargin >= 0 ? '+' : '') + fmtGBP(b.guaranteedMargin)}</span></div>
+    <div class="rowline"><span class="k">+ end-prize share (${c.totalTickets ? pct(b.N / c.totalTickets) : '?'})</span><span class="v">${fmtGBP(b.endShare)}</span></div>
+    <div class="rowline"><span class="k">Expected total margin</span><span class="v" style="color:${b.expectedMargin > 0 ? 'var(--green)' : 'var(--red)'}">${(b.expectedMargin >= 0 ? '+' : '') + fmtGBP(b.expectedMargin)}</span></div>
+    ${b.guaranteedMargin > 0 ? `<div class="buyoutflag" style="margin-top:10px">💰 ${b.exact ? 'Mathematically profitable buyout — instant wins alone beat the cost.' : 'Looks profitable on estimates — verify claimed wins on-site before committing.'}</div>` : '<div class="note">Not currently profitable to buy out. This flips green when unclaimed instant wins exceed the cost of the remaining tickets.</div>'}
+  </div>
+
+  <div class="section">
+    <h3>Syndicate split ${c.maxPerPerson ? `(cap ${c.maxPerPerson.toLocaleString()}/person)` : '(no known cap)'}</h3>
+    <div class="grid">
+      <div class="cell"><div class="k">People needed</div><div class="v">${syn.people}</div></div>
+      <div class="cell"><div class="k">Stake each</div><div class="v">${fmtGBP(syn.perHeadCost)}</div></div>
+      <div class="cell"><div class="k">Floor each${est}</div><div class="v ${syn.perHeadFloor > 0 ? 'green' : 'red'}">${(syn.perHeadFloor >= 0 ? '+' : '') + fmtGBP(syn.perHeadFloor)}</div></div>
+      <div class="cell"><div class="k">Expected each</div><div class="v ${syn.perHeadExpected > 0 ? 'green' : 'red'}">${(syn.perHeadExpected >= 0 ? '+' : '') + fmtGBP(syn.perHeadExpected)}</div></div>
+    </div>
+    <div class="note">Instant wins land on random tickets — profit is guaranteed collectively, not per person. Agree the pool-and-split before buying.</div>
+    <button class="btn green" id="shareBtn">📣 Alert the grinds</button>
+  </div>
+
+  <div class="section">
+    <h3>Your odds</h3>
+    <div class="note" style="margin:0 0 4px">Chance of at least one instant win with <b id="oddsK" style="color:var(--text)">10</b> tickets:</div>
+    <div style="font-size:26px;font-weight:750;color:var(--green)" id="oddsOut">–</div>
+    <input type="range" id="oddsSlider" min="1" max="${Math.min(Math.max(N, 1), c.maxPerPerson || 500)}" value="${Math.min(10, N || 1)}">
+    <div class="note">Cost <b id="oddsCost" style="color:var(--text)"></b> · based on ${iw.remaining ?? '?'} winning tickets in ${N.toLocaleString()} remaining${est}.</div>
+  </div>
+
+  <div class="section">
+    <a class="btn outline" href="${c.url}" target="_blank" rel="noopener">Open comp on ${site.name} ↗</a>
+  </div>`;
+  sheet.classList.add('open');
+
+  document.getElementById('closeSheet').onclick = () => sheet.classList.remove('open');
+  const slider = document.getElementById('oddsSlider');
+  const updateOdds = () => {
+    const k = +slider.value;
+    document.getElementById('oddsK').textContent = k;
+    document.getElementById('oddsOut').textContent = pct(probAtLeastOne(N, iw.remaining || 0, k));
+    document.getElementById('oddsCost').textContent = fmtGBP(k * c.price, 2);
+  };
+  slider.oninput = updateOdds; updateOdds();
+
+  document.getElementById('shareBtn').onclick = () => {
+    const msg = shareText(c, b, syn);
+    if (navigator.share) navigator.share({ text: msg }).catch(() => {});
+    else { navigator.clipboard.writeText(msg); alert('Copied to clipboard'); }
+  };
+}
+
+function shareText(c, b, syn) {
+  const site = siteOf(c.siteKey);
+  const lines = [
+    `🎯 ${c.title} — ${site.name}`,
+    `${ticketsRemaining(c).toLocaleString()} tickets left @ ${fmtGBP(c.price, 2)} (${fmtCountdown(c)})`,
+    `Unclaimed instant wins ≈ ${fmtGBP(b.guaranteed)}${b.exact ? '' : ' (est)'}`
+  ];
+  if (b.guaranteedMargin > 0) {
+    lines.push(`💰 BUYOUT: all tickets = ${fmtGBP(b.cost)} → guaranteed +${fmtGBP(b.guaranteedMargin)} floor`);
+    lines.push(`Split ${syn.people} ways = ${fmtGBP(syn.perHeadCost)} each, floor +${fmtGBP(syn.perHeadFloor)} each`);
+  }
+  lines.push(c.url);
+  return lines.join('\n');
+}
+
+function escapeHtml(s) { return String(s).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])); }
+
+/* ============ events ============ */
+document.addEventListener('click', (e) => {
+  const star = e.target.closest('[data-star]');
+  if (star) {
+    const id = star.dataset.star;
+    watchlist.has(id) ? watchlist.delete(id) : watchlist.add(id);
+    localStorage.setItem('ct-watch', JSON.stringify([...watchlist]));
+    render();
+    e.stopPropagation();
+    return;
+  }
+  const card = e.target.closest('.card[data-id]');
+  if (card) { openSheet(card.dataset.id); return; }
+  const sort = e.target.closest('[data-sort]');
+  if (sort) { sortBy = sort.dataset.sort; localStorage.setItem('ct-sort', sortBy); render(); return; }
+  const site = e.target.closest('[data-site]');
+  if (site) { siteFilter = site.dataset.site; render(); return; }
+  const nav = e.target.closest('nav button');
+  if (nav) {
+    view = nav.dataset.view;
+    document.querySelectorAll('nav button').forEach((b) => b.classList.toggle('on', b === nav));
+    render();
+  }
+});
+document.getElementById('refreshBtn').addEventListener('click', () => loadData(true));
+
+/* ============ PIN gate ============ */
+function unlock() {
+  document.getElementById('gate').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  loadData(false);
+}
+document.getElementById('pinBtn').addEventListener('click', tryPin);
+document.getElementById('pinInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') tryPin(); });
+function tryPin() {
+  if (document.getElementById('pinInput').value === PIN) {
+    localStorage.setItem('ct-auth', '1');
+    unlock();
+  } else {
+    document.getElementById('pinErr').textContent = 'Wrong PIN';
+  }
+}
+if (localStorage.getItem('ct-auth') === '1') unlock();
+
+/* ============ SW ============ */
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  navigator.serviceWorker.register('service-worker.js').catch(() => {});
+}
+</script>
+</body>
+</html>
