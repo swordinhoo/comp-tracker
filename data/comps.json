@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-08-20T10:43:31.410Z",
+ "updatedAt": "2026-08-20T11:10:56.657Z",
  "sample": false,
  "sites": [
   {
@@ -31,8 +31,8 @@
    "name": "DD Competitions",
    "url": "https://www.ddcompetitions.com/",
    "platform": "rafflex/livewire",
-   "error": "no comps parsed",
-   "compCount": 0
+   "error": null,
+   "compCount": 14
   },
   {
    "key": "epic",
@@ -119,8 +119,8 @@
    "name": "Enhanced Life Competitions",
    "url": "https://enhancedlifecompetitions.co.uk/",
    "platform": "rafflex/livewire",
-   "error": "no comps parsed",
-   "compCount": 0
+   "error": null,
+   "compCount": 14
   },
   {
    "key": "southcoast",
@@ -330,89 +330,10 @@
    "firstSeen": "2026-08-18T08:56:25.663Z"
   },
   {
-   "id": "carley:franks-wisdom-tooth-wipeout-win-up-to-ps100-instantly",
-   "siteKey": "carley",
-   "title": "🦷😵‍💫 Frank's Wisdom Tooth Wipeout – Win Up to £100 Instantly! 💷⚡",
-   "url": "https://carleycomps.co.uk/competition/franks-wisdom-tooth-wipeout-win-up-to-ps100-instantly",
-   "price": 0.07,
-   "totalTickets": 69999,
-   "ticketsSold": 28133,
-   "maxPerPerson": 6999,
-   "closesAt": null,
-   "endPrize": null,
-   "instantWins": {
-    "total": 1847,
-    "claimed": 750,
-    "remaining": 1097,
-    "remainingValue": 1898,
-    "totalValue": 3000,
-    "prizes": [
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 7,
-      "found": 2
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 10,
-      "found": 4
-     },
-     {
-      "name": "£20 CASH",
-      "value": 20,
-      "qty": 25,
-      "found": 13
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 35,
-      "found": 7
-     },
-     {
-      "name": "£5 CASH",
-      "value": 5,
-      "qty": 70,
-      "found": 28
-     },
-     {
-      "name": "£1 CASH",
-      "value": 1,
-      "qty": 600,
-      "found": 232
-     },
-     {
-      "name": "20P CASH",
-      "value": 0,
-      "qty": 1100,
-      "found": 464
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 4899.93,
-    "iwPoolValue": 3000,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 64.76,
-    "rtpWithEnd": 64.76
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 2930.62,
-    "rtpIwOnly": 64.76,
-    "soldPct": 40.19
-   },
-   "firstSeen": "2026-07-17T05:16:53.422Z"
-  },
-  {
    "id": "carley:bingo",
    "siteKey": "carley",
    "title": "🔥 TWO FAT LADIES BINGO 🪙 WIN UP TO £2,500 INSTANTLY! 💰 | £800 END PRIZE",
-   "url": "https://carleycomps.co.uk/competition/bingo",
+   "url": "https://carleycomps.co.uk/competition/bingo?fbclid=IwYW9leATzvWVwZG9mBWZkaWQWUM0bCYP4fYHiBPMIQNkfNOl_lhl2xWV4dG4DYWVtATAAYWRpZAGrOZn4A4g7c3J0YwZhcHBfaWQKNjYyODU2ODM3OQABHgvC9WtUu8UysG_K3NXIF5M77Gn0RO7JbPeSrHzKooHTMvueyYlg3R_ix-lr_aem_S_fK8-14k0YTDIHP5hfUuw&utm_medium=paid&utm_source=fb&utm_id=120253148134520683&utm_content=120253148134500683&utm_term=120253148134510683&utm_campaign=120253148134520683",
    "price": 0.25,
    "totalTickets": 499999,
    "ticketsSold": 7345,
@@ -558,6 +479,85 @@
     "soldPct": 1.47
    },
    "firstSeen": "2026-08-15T18:03:32.541Z"
+  },
+  {
+   "id": "carley:franks-wisdom-tooth-wipeout-win-up-to-ps100-instantly",
+   "siteKey": "carley",
+   "title": "🦷😵‍💫 Frank's Wisdom Tooth Wipeout – Win Up to £100 Instantly! 💷⚡",
+   "url": "https://carleycomps.co.uk/competition/franks-wisdom-tooth-wipeout-win-up-to-ps100-instantly",
+   "price": 0.07,
+   "totalTickets": 69999,
+   "ticketsSold": 28133,
+   "maxPerPerson": 6999,
+   "closesAt": null,
+   "endPrize": null,
+   "instantWins": {
+    "total": 1847,
+    "claimed": 750,
+    "remaining": 1097,
+    "remainingValue": 1898,
+    "totalValue": 3000,
+    "prizes": [
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 7,
+      "found": 2
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 10,
+      "found": 4
+     },
+     {
+      "name": "£20 CASH",
+      "value": 20,
+      "qty": 25,
+      "found": 13
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 35,
+      "found": 7
+     },
+     {
+      "name": "£5 CASH",
+      "value": 5,
+      "qty": 70,
+      "found": 28
+     },
+     {
+      "name": "£1 CASH",
+      "value": 1,
+      "qty": 600,
+      "found": 232
+     },
+     {
+      "name": "20P CASH",
+      "value": 0,
+      "qty": 1100,
+      "found": 464
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 4899.93,
+    "iwPoolValue": 3000,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 64.76,
+    "rtpWithEnd": 64.76
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 2930.62,
+    "rtpIwOnly": 64.76,
+    "soldPct": 40.19
+   },
+   "firstSeen": "2026-07-17T05:16:53.422Z"
   },
   {
    "id": "carley:spin-the-wheel",
@@ -1033,6 +1033,73 @@
    "firstSeen": "2026-07-17T05:16:53.422Z"
   },
   {
+   "id": "carley:wynn-biggs-candyland-adventure-win-up-to-ps1000-instantly",
+   "siteKey": "carley",
+   "title": "🍭🦄 Wynn Biggs CandyLand Adventure! 🍬🌈 💥 Win Up To £1,000 Instantly! 💷✨",
+   "url": "https://carleycomps.co.uk/competition/wynn-biggs-candyland-adventure-win-up-to-ps1000-instantly",
+   "price": 0.89,
+   "totalTickets": 13500,
+   "ticketsSold": 879,
+   "maxPerPerson": 1350,
+   "closesAt": null,
+   "endPrize": null,
+   "instantWins": {
+    "total": 2019,
+    "claimed": 124,
+    "remaining": 1895,
+    "remainingValue": 8176,
+    "totalValue": 8300,
+    "prizes": [
+     {
+      "name": "£1000 CASH",
+      "value": 1000,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "name": "£1 CASH",
+      "value": 1,
+      "qty": 2000,
+      "found": 124
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 12015,
+    "iwPoolValue": 8300,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 72.79,
+    "rtpWithEnd": 72.79
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 11232.69,
+    "rtpIwOnly": 72.79,
+    "soldPct": 6.51
+   },
+   "firstSeen": "2026-08-02T06:27:34.043Z"
+  },
+  {
    "id": "carley:biilly-big-bllocks-win-up-to-ps1000-instantly",
    "siteKey": "carley",
    "title": "😳🍒 BiILLY BIG B*LLOCKS… WIN UP TO £1000 INSTANTLY 💸🔥",
@@ -1171,73 +1238,6 @@
     "soldPct": 8.62
    },
    "firstSeen": "2026-07-31T12:13:20.175Z"
-  },
-  {
-   "id": "carley:wynn-biggs-candyland-adventure-win-up-to-ps1000-instantly",
-   "siteKey": "carley",
-   "title": "🍭🦄 Wynn Biggs CandyLand Adventure! 🍬🌈 💥 Win Up To £1,000 Instantly! 💷✨",
-   "url": "https://carleycomps.co.uk/competition/wynn-biggs-candyland-adventure-win-up-to-ps1000-instantly",
-   "price": 0.89,
-   "totalTickets": 13500,
-   "ticketsSold": 879,
-   "maxPerPerson": 1350,
-   "closesAt": null,
-   "endPrize": null,
-   "instantWins": {
-    "total": 2019,
-    "claimed": 124,
-    "remaining": 1895,
-    "remainingValue": 8176,
-    "totalValue": 8300,
-    "prizes": [
-     {
-      "name": "£1000 CASH",
-      "value": 1000,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 5,
-      "found": 0
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 5,
-      "found": 0
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 6,
-      "found": 0
-     },
-     {
-      "name": "£1 CASH",
-      "value": 1,
-      "qty": 2000,
-      "found": 124
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 12015,
-    "iwPoolValue": 8300,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 72.79,
-    "rtpWithEnd": 72.79
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 11232.69,
-    "rtpIwOnly": 72.79,
-    "soldPct": 6.51
-   },
-   "firstSeen": "2026-08-02T06:27:34.043Z"
   },
   {
    "id": "carley:byggwynnsmallwynn",
@@ -2988,6 +2988,146 @@
    "firstSeen": "2026-08-13T11:21:09.111Z"
   },
   {
+   "id": "carley:cheaters-get-chopped-win-up-to-ps500",
+   "siteKey": "carley",
+   "title": "CHEATERS GET CHOPPED 🍆✂️ – WIN UP TO £500",
+   "url": "https://carleycomps.co.uk/competition/cheaters-get-chopped-win-up-to-ps500",
+   "price": 0.25,
+   "totalTickets": 39999,
+   "ticketsSold": 4718,
+   "maxPerPerson": 3999,
+   "closesAt": null,
+   "endPrize": null,
+   "instantWins": {
+    "total": 4105,
+    "claimed": 446,
+    "remaining": 3659,
+    "remainingValue": 5571.25,
+    "totalValue": 6500,
+    "prizes": [
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 5,
+      "found": 1
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 10,
+      "found": 1
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 20,
+      "found": 3
+     },
+     {
+      "name": "£20 CASH",
+      "value": 20,
+      "qty": 30,
+      "found": 1
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 40,
+      "found": 5
+     },
+     {
+      "name": "25P CASH",
+      "value": 0.25,
+      "qty": 4000,
+      "found": 435
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 9999.75,
+    "iwPoolValue": 6500,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 63.16,
+    "rtpWithEnd": 63.16
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 8820.25,
+    "rtpIwOnly": 63.16,
+    "soldPct": 11.8
+   },
+   "firstSeen": "2026-07-17T04:41:56.907Z"
+  },
+  {
+   "id": "carley:granny-smash-win-up-to-ps350-instantly",
+   "siteKey": "carley",
+   "title": "👵 GRANNY SMASH! 💷 WIN UP TO £350 INSTANTLY!",
+   "url": "https://carleycomps.co.uk/competition/granny-smash-win-up-to-ps350-instantly",
+   "price": 0.06,
+   "totalTickets": 199999,
+   "ticketsSold": 37472,
+   "maxPerPerson": 34999,
+   "closesAt": null,
+   "endPrize": null,
+   "instantWins": {
+    "total": 1640,
+    "claimed": 325,
+    "remaining": 1315,
+    "remainingValue": 6611,
+    "totalValue": 8000,
+    "prizes": [
+     {
+      "name": "£350 CASH",
+      "value": 350,
+      "qty": 10,
+      "found": 2
+     },
+     {
+      "name": "£150 CASH",
+      "value": 150,
+      "qty": 10,
+      "found": 2
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 20,
+      "found": 0
+     },
+     {
+      "name": "£5 CASH",
+      "value": 5,
+      "qty": 100,
+      "found": 17
+     },
+     {
+      "name": "£1 CASH",
+      "value": 1,
+      "qty": 1500,
+      "found": 304
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 11999.939999999999,
+    "iwPoolValue": 8000,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 67.79,
+    "rtpWithEnd": 67.79
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 9751.62,
+    "rtpIwOnly": 67.79,
+    "soldPct": 18.74
+   },
+   "firstSeen": "2026-07-23T10:13:00.566Z"
+  },
+  {
    "id": "carley:all-aboard-wynns-ark-win-up-to-ps2500-instantly",
    "siteKey": "carley",
    "title": "🚢🐘 All Aboard Wynn's Ark – Win Up To £2,500 Instantly! 🎟️💷",
@@ -3101,146 +3241,6 @@
     "soldPct": 18.86
    },
    "firstSeen": "2026-07-17T05:16:53.422Z"
-  },
-  {
-   "id": "carley:granny-smash-win-up-to-ps350-instantly",
-   "siteKey": "carley",
-   "title": "👵 GRANNY SMASH! 💷 WIN UP TO £350 INSTANTLY!",
-   "url": "https://carleycomps.co.uk/competition/granny-smash-win-up-to-ps350-instantly",
-   "price": 0.06,
-   "totalTickets": 199999,
-   "ticketsSold": 37472,
-   "maxPerPerson": 34999,
-   "closesAt": null,
-   "endPrize": null,
-   "instantWins": {
-    "total": 1640,
-    "claimed": 325,
-    "remaining": 1315,
-    "remainingValue": 6611,
-    "totalValue": 8000,
-    "prizes": [
-     {
-      "name": "£350 CASH",
-      "value": 350,
-      "qty": 10,
-      "found": 2
-     },
-     {
-      "name": "£150 CASH",
-      "value": 150,
-      "qty": 10,
-      "found": 2
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 20,
-      "found": 0
-     },
-     {
-      "name": "£5 CASH",
-      "value": 5,
-      "qty": 100,
-      "found": 17
-     },
-     {
-      "name": "£1 CASH",
-      "value": 1,
-      "qty": 1500,
-      "found": 304
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 11999.939999999999,
-    "iwPoolValue": 8000,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 67.79,
-    "rtpWithEnd": 67.79
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 9751.62,
-    "rtpIwOnly": 67.79,
-    "soldPct": 18.74
-   },
-   "firstSeen": "2026-07-23T10:13:00.566Z"
-  },
-  {
-   "id": "carley:cheaters-get-chopped-win-up-to-ps500",
-   "siteKey": "carley",
-   "title": "CHEATERS GET CHOPPED 🍆✂️ – WIN UP TO £500",
-   "url": "https://carleycomps.co.uk/competition/cheaters-get-chopped-win-up-to-ps500",
-   "price": 0.25,
-   "totalTickets": 39999,
-   "ticketsSold": 4718,
-   "maxPerPerson": 3999,
-   "closesAt": null,
-   "endPrize": null,
-   "instantWins": {
-    "total": 4105,
-    "claimed": 446,
-    "remaining": 3659,
-    "remainingValue": 5571.25,
-    "totalValue": 6500,
-    "prizes": [
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 5,
-      "found": 1
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 10,
-      "found": 1
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 20,
-      "found": 3
-     },
-     {
-      "name": "£20 CASH",
-      "value": 20,
-      "qty": 30,
-      "found": 1
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 40,
-      "found": 5
-     },
-     {
-      "name": "25P CASH",
-      "value": 0.25,
-      "qty": 4000,
-      "found": 435
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 9999.75,
-    "iwPoolValue": 6500,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 63.16,
-    "rtpWithEnd": 63.16
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 8820.25,
-    "rtpIwOnly": 63.16,
-    "soldPct": 11.8
-   },
-   "firstSeen": "2026-07-17T04:41:56.907Z"
   },
   {
    "id": "carley:plink-or-stink-win-up-to-ps250",
@@ -3637,7 +3637,7 @@
    "url": "https://redlemonx.co.uk/competition/old-mcclaires-farm",
    "price": 0.01,
    "totalTickets": 1000000,
-   "ticketsSold": 318906,
+   "ticketsSold": 319025,
    "maxPerPerson": 100000,
    "closesAt": null,
    "endPrize": null,
@@ -3721,9 +3721,9 @@
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 6810.94,
+    "buyoutCost": 6809.75,
     "rtpIwOnly": 0,
-    "soldPct": 31.89
+    "soldPct": 31.9
    },
    "firstSeen": "2026-08-09T02:19:37.330Z"
   },
@@ -3734,14 +3734,14 @@
    "url": "https://redlemonx.co.uk/competition/vault-7-2",
    "price": 0.77,
    "totalTickets": 41177,
-   "ticketsSold": 3265,
+   "ticketsSold": 3284,
    "maxPerPerson": 4118,
    "closesAt": null,
    "endPrize": null,
    "instantWins": {
     "total": 3117,
-    "claimed": 233,
-    "remaining": 2884,
+    "claimed": 234,
+    "remaining": 2883,
     "remainingValue": 13874.52,
     "totalValue": 14393.68,
     "prizes": [
@@ -3785,7 +3785,7 @@
       "name": "Another Go 🤞",
       "value": 0,
       "qty": 3000,
-      "found": 224
+      "found": 225
      }
     ],
     "exact": true
@@ -3795,143 +3795,16 @@
     "selloutRevenue": 31706.29,
     "iwPoolValue": 14393.68,
     "endPrizeValue": 0,
-    "rtpIwOnly": 47.53,
-    "rtpWithEnd": 64.79
+    "rtpIwOnly": 47.55,
+    "rtpWithEnd": 64.81
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 29192.24,
-    "rtpIwOnly": 47.53,
-    "soldPct": 7.93
+    "buyoutCost": 29177.61,
+    "rtpIwOnly": 47.55,
+    "soldPct": 7.98
    },
    "firstSeen": "2026-08-17T19:40:51.781Z"
-  },
-  {
-   "id": "redlemonx:manifest-magic",
-   "siteKey": "redlemonx",
-   "title": "Manifest Magic ✨",
-   "url": "https://redlemonx.co.uk/competition/manifest-magic",
-   "price": 0.22,
-   "totalTickets": 333333,
-   "ticketsSold": 106811,
-   "maxPerPerson": 25000,
-   "closesAt": null,
-   "endPrize": null,
-   "instantWins": {
-    "total": 8395,
-    "claimed": 2684,
-    "remaining": 5711,
-    "remainingValue": 0,
-    "totalValue": 0,
-    "prizes": [
-     {
-      "name": "Abundance ✨ £1111 ✨",
-      "value": 0,
-      "qty": 5,
-      "found": 1
-     },
-     {
-      "name": "Fortune ✨ £999 ✨",
-      "value": 0,
-      "qty": 2,
-      "found": 1
-     },
-     {
-      "name": "Prosperity ✨ £888 ✨",
-      "value": 0,
-      "qty": 2,
-      "found": 0
-     },
-     {
-      "name": "Luck ✨ £777 ✨",
-      "value": 0,
-      "qty": 2,
-      "found": 1
-     },
-     {
-      "name": "Harmony ✨ £666 ✨",
-      "value": 0,
-      "qty": 2,
-      "found": 0
-     },
-     {
-      "name": "Rise ✨ £555 ✨",
-      "value": 0,
-      "qty": 2,
-      "found": 2
-     },
-     {
-      "name": "Dreams ✨ £222 ✨",
-      "value": 0,
-      "qty": 10,
-      "found": 3
-     },
-     {
-      "name": "Blessing✨ £111 ✨",
-      "value": 0,
-      "qty": 20,
-      "found": 7
-     },
-     {
-      "name": "Gratitude ✨ £55 ✨",
-      "value": 0,
-      "qty": 50,
-      "found": 14
-     },
-     {
-      "name": "Believe ✨ £22 ✨",
-      "value": 0,
-      "qty": 150,
-      "found": 47
-     },
-     {
-      "name": "Destiny ✨ £11 ✨",
-      "value": 0,
-      "qty": 400,
-      "found": 122
-     },
-     {
-      "name": "Joy ✨ £5.55 ✨",
-      "value": 0,
-      "qty": 750,
-      "found": 252
-     },
-     {
-      "name": "Hope ✨ £2.22 ✨",
-      "value": 0,
-      "qty": 1000,
-      "found": 318
-     },
-     {
-      "name": "Wish ✨ £1.11 ✨",
-      "value": 0,
-      "qty": 1000,
-      "found": 335
-     },
-     {
-      "name": "Spark ✨ 22p ✨",
-      "value": 0,
-      "qty": 5000,
-      "found": 1581
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 73333.26,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 0,
-    "rtpWithEnd": 0
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 49834.84,
-    "rtpIwOnly": 0,
-    "soldPct": 32.04
-   },
-   "firstSeen": "2026-07-23T12:13:59.860Z"
   },
   {
    "id": "redlemonx:picky-bits-2",
@@ -3940,7 +3813,7 @@
    "url": "https://redlemonx.co.uk/competition/picky-bits-2",
    "price": 0.65,
    "totalTickets": 9200,
-   "ticketsSold": 5724,
+   "ticketsSold": 5747,
    "maxPerPerson": 920,
    "closesAt": null,
    "endPrize": null,
@@ -4061,16 +3934,143 @@
     "selloutRevenue": 5980,
     "iwPoolValue": 1200,
     "endPrizeValue": 0,
-    "rtpIwOnly": 30.98,
-    "rtpWithEnd": 51.05
+    "rtpIwOnly": 31.19,
+    "rtpWithEnd": 51.25
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 2259.4,
-    "rtpIwOnly": 30.98,
-    "soldPct": 62.22
+    "buyoutCost": 2244.45,
+    "rtpIwOnly": 31.19,
+    "soldPct": 62.47
    },
    "firstSeen": "2026-08-07T03:32:30.578Z"
+  },
+  {
+   "id": "redlemonx:manifest-magic",
+   "siteKey": "redlemonx",
+   "title": "Manifest Magic ✨",
+   "url": "https://redlemonx.co.uk/competition/manifest-magic",
+   "price": 0.22,
+   "totalTickets": 333333,
+   "ticketsSold": 107061,
+   "maxPerPerson": 25000,
+   "closesAt": null,
+   "endPrize": null,
+   "instantWins": {
+    "total": 8395,
+    "claimed": 2688,
+    "remaining": 5707,
+    "remainingValue": 0,
+    "totalValue": 0,
+    "prizes": [
+     {
+      "name": "Abundance ✨ £1111 ✨",
+      "value": 0,
+      "qty": 5,
+      "found": 1
+     },
+     {
+      "name": "Fortune ✨ £999 ✨",
+      "value": 0,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "name": "Prosperity ✨ £888 ✨",
+      "value": 0,
+      "qty": 2,
+      "found": 0
+     },
+     {
+      "name": "Luck ✨ £777 ✨",
+      "value": 0,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "name": "Harmony ✨ £666 ✨",
+      "value": 0,
+      "qty": 2,
+      "found": 0
+     },
+     {
+      "name": "Rise ✨ £555 ✨",
+      "value": 0,
+      "qty": 2,
+      "found": 2
+     },
+     {
+      "name": "Dreams ✨ £222 ✨",
+      "value": 0,
+      "qty": 10,
+      "found": 3
+     },
+     {
+      "name": "Blessing✨ £111 ✨",
+      "value": 0,
+      "qty": 20,
+      "found": 7
+     },
+     {
+      "name": "Gratitude ✨ £55 ✨",
+      "value": 0,
+      "qty": 50,
+      "found": 14
+     },
+     {
+      "name": "Believe ✨ £22 ✨",
+      "value": 0,
+      "qty": 150,
+      "found": 47
+     },
+     {
+      "name": "Destiny ✨ £11 ✨",
+      "value": 0,
+      "qty": 400,
+      "found": 123
+     },
+     {
+      "name": "Joy ✨ £5.55 ✨",
+      "value": 0,
+      "qty": 750,
+      "found": 252
+     },
+     {
+      "name": "Hope ✨ £2.22 ✨",
+      "value": 0,
+      "qty": 1000,
+      "found": 318
+     },
+     {
+      "name": "Wish ✨ £1.11 ✨",
+      "value": 0,
+      "qty": 1000,
+      "found": 335
+     },
+     {
+      "name": "Spark ✨ 22p ✨",
+      "value": 0,
+      "qty": 5000,
+      "found": 1584
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 73333.26,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 0,
+    "rtpWithEnd": 0
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 49779.84,
+    "rtpIwOnly": 0,
+    "soldPct": 32.12
+   },
+   "firstSeen": "2026-07-23T12:13:59.860Z"
   },
   {
    "id": "redlemonx:x-marks-the-spot",
@@ -4291,7 +4291,7 @@
    "url": "https://skylinecomps.co.uk/competition/slinko-plinko",
    "price": 0.05,
    "totalTickets": 905000,
-   "ticketsSold": 363965,
+   "ticketsSold": 363997,
    "maxPerPerson": null,
    "closesAt": "2026-08-31T14:00:00.000Z",
    "endPrize": null,
@@ -4368,7 +4368,7 @@
    "url": "https://skylinecomps.co.uk/competition/scratchnwin",
    "price": 0.08,
    "totalTickets": 782000,
-   "ticketsSold": 676583,
+   "ticketsSold": 676693,
    "maxPerPerson": null,
    "closesAt": "2026-09-04T14:00:00.000Z",
    "endPrize": null,
@@ -4507,7 +4507,7 @@
    "url": "https://skylinecomps.co.uk/competition/bingo",
    "price": 0.07,
    "totalTickets": 595000,
-   "ticketsSold": 210250,
+   "ticketsSold": 210394,
    "maxPerPerson": null,
    "closesAt": "2026-08-31T14:00:00.000Z",
    "endPrize": null,
@@ -4569,7 +4569,7 @@
    "url": "https://skylinecomps.co.uk/competition/scooby-doos-loot",
    "price": 0.08,
    "totalTickets": 790000,
-   "ticketsSold": 154906,
+   "ticketsSold": 154914,
    "maxPerPerson": null,
    "closesAt": "2026-08-28T14:00:00.000Z",
    "endPrize": null,
@@ -4630,13 +4630,463 @@
    "firstSeen": "2026-08-14T23:38:33.857Z"
   },
   {
+   "id": "dd:ps666-super-strike-2",
+   "siteKey": "dd",
+   "title": "😈£666 Super Strike😈 #2",
+   "url": "https://ddcompetitions.com/competition/ps666-super-strike-2",
+   "price": 0.06,
+   "totalTickets": 666666,
+   "ticketsSold": 125377,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 666,
+    "cashValue": 666
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 39999.96,
+    "iwPoolValue": 0,
+    "endPrizeValue": 666
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:range-rover-evoque-r-dynamic-d150-20-plus-instant-wins-inside",
+   "siteKey": "dd",
+   "title": "🤍🔥Range Rover Evoque R-Dynamic D150 2.0🔥🤍 ||PLUS INSTANT WINS INSIDE 👀||",
+   "url": "https://ddcompetitions.com/competition/range-rover-evoque-r-dynamic-d150-20-plus-instant-wins-inside",
+   "price": 1,
+   "totalTickets": 35000,
+   "ticketsSold": 21142,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 35000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:grab-that-ghoul",
+   "siteKey": "dd",
+   "title": "👻Grab That Ghoul👻",
+   "url": "https://ddcompetitions.com/competition/grab-that-ghoul",
+   "price": 0.6,
+   "totalTickets": 25000,
+   "ticketsSold": 240,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-16T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 15000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:the-ultimate-grand-grabber",
+   "siteKey": "dd",
+   "title": "The ULTIMATE Grand Grabber 🕹️💸",
+   "url": "https://ddcompetitions.com/competition/the-ultimate-grand-grabber",
+   "price": 0.29,
+   "totalTickets": 500000,
+   "ticketsSold": 164321,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 145000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:turkey-teeth-package",
+   "siteKey": "dd",
+   "title": "🌞✈️😁Turkey Teeth Package😁✈️🌞",
+   "url": "https://ddcompetitions.com/competition/turkey-teeth-package",
+   "price": 2.99,
+   "totalTickets": 2200,
+   "ticketsSold": 966,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 6578,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:bali-3-centre-island-escape-june-2027",
+   "siteKey": "dd",
+   "title": "🌺✨ BALI 3-CENTRE ISLAND ESCAPE – JUNE 2027 ✨🌺",
+   "url": "https://ddcompetitions.com/competition/bali-3-centre-island-escape-june-2027",
+   "price": 0.99,
+   "totalTickets": 10000,
+   "ticketsSold": 1870,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 9900,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:mini-draw-win-50-entries-into-our-turkey-teeth-package4",
+   "siteKey": "dd",
+   "title": "⭐MINI DRAW - win 50 Entries into our Turkey Teeth Package⭐#4",
+   "url": "https://ddcompetitions.com/competition/mini-draw-win-50-entries-into-our-turkey-teeth-package4",
+   "price": 1,
+   "totalTickets": 200,
+   "ticketsSold": 78,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T19:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 200,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:ps2000-tax-free-cash-for-85p",
+   "siteKey": "dd",
+   "title": "💰🖤£2,000 Tax Free Cash for 85p🖤💰",
+   "url": "https://ddcompetitions.com/competition/ps2000-tax-free-cash-for-85p",
+   "price": 0.85,
+   "totalTickets": 5000,
+   "ticketsSold": 1192,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 2000,
+    "cashValue": 2000
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 4250,
+    "iwPoolValue": 0,
+    "endPrizeValue": 2000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:wallet-of-wonder-10",
+   "siteKey": "dd",
+   "title": "👛Wallet of Wonder👛 #10",
+   "url": "https://ddcompetitions.com/competition/wallet-of-wonder-10",
+   "price": 0.39,
+   "totalTickets": 13000,
+   "ticketsSold": 3578,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 5070,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:genies-jackpots-1in5-odds-4",
+   "siteKey": "dd",
+   "title": "🧞Genies Jackpots |1in5 Odds|🧞 #4",
+   "url": "https://ddcompetitions.com/competition/genies-jackpots-1in5-odds-4",
+   "price": 1,
+   "totalTickets": 10000,
+   "ticketsSold": 1509,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 10000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:kissy-kissy-scratchies-5",
+   "siteKey": "dd",
+   "title": "💋Kissy Kissy Scratchies💋 #5",
+   "url": "https://ddcompetitions.com/competition/kissy-kissy-scratchies-5",
+   "price": 0.1,
+   "totalTickets": 75000,
+   "ticketsSold": 27346,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 7500,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:etiaw-100x-ps100-wins-more3",
+   "siteKey": "dd",
+   "title": "💖⭐ETIAW - 100x £100 Wins + MORE!⭐💖#3",
+   "url": "https://ddcompetitions.com/competition/etiaw-100x-ps100-wins-more3",
+   "price": 1.99,
+   "totalTickets": 10000,
+   "ticketsSold": 1651,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 100,
+    "cashValue": 100
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 19900,
+    "iwPoolValue": 0,
+    "endPrizeValue": 100
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:honey-makes-money2",
+   "siteKey": "dd",
+   "title": "🍯🐝Honey Makes Money🐝🍯#2",
+   "url": "https://ddcompetitions.com/competition/honey-makes-money2",
+   "price": 0.1,
+   "totalTickets": 75000,
+   "ticketsSold": 5399,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-26T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 7500,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
+   "id": "dd:ps1000-cash-40x-instant-wins-to-find-2",
+   "siteKey": "dd",
+   "title": "🥂£1,000 Cash + 40x Instant wins to find!🥂 #2",
+   "url": "https://ddcompetitions.com/competition/ps1000-cash-40x-instant-wins-to-find-2",
+   "price": 0.99,
+   "totalTickets": 6100,
+   "ticketsSold": 229,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-26T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 1000,
+    "cashValue": 1000
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 6039,
+    "iwPoolValue": 0,
+    "endPrizeValue": 1000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.656Z"
+  },
+  {
    "id": "odp:shark-attack-3",
    "siteKey": "odp",
    "title": "Shark Attack #3",
    "url": "https://odpcompetitions.com/competition/shark-attack-3",
    "price": 0.07,
    "totalTickets": 250000,
-   "ticketsSold": 245034,
+   "ticketsSold": 245039,
    "maxPerPerson": null,
    "closesAt": "2026-08-21T19:00:00.000Z",
    "endPrize": null,
@@ -4667,7 +5117,7 @@
    "url": "https://odpcompetitions.com/competition/cash-rush-1-in-5-3",
    "price": 0.99,
    "totalTickets": 281390,
-   "ticketsSold": 51281,
+   "ticketsSold": 51287,
    "maxPerPerson": null,
    "closesAt": "2026-08-21T19:00:00.000Z",
    "endPrize": null,
@@ -4739,7 +5189,7 @@
    "url": "https://odpcompetitions.com/competition/pickle-penny",
    "price": 0.01,
    "totalTickets": 1000000,
-   "ticketsSold": 984929,
+   "ticketsSold": 984949,
    "maxPerPerson": null,
    "closesAt": "2026-08-21T19:00:00.000Z",
    "endPrize": null,
@@ -4811,15 +5261,15 @@
    "url": "https://odpcompetitions.com/competition/rags-to-riches",
    "price": 0.03,
    "totalTickets": 4000000,
-   "ticketsSold": 2506589,
+   "ticketsSold": 2506905,
    "maxPerPerson": null,
    "closesAt": "2026-08-24T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 27604,
-    "claimed": 17184,
-    "remaining": 10420,
-    "remainingValue": 29551.5,
+    "claimed": 17185,
+    "remaining": 10419,
+    "remainingValue": 29551,
     "totalValue": 71500,
     "prizes": [
      {
@@ -4870,7 +5320,7 @@
      {
       "value": 0.5,
       "qty": 20000,
-      "found": 12421
+      "found": 12422
      }
     ],
     "exact": false
@@ -4893,15 +5343,15 @@
    "url": "https://odpcompetitions.com/competition/penny-stardust",
    "price": 0.01,
    "totalTickets": 1000000,
-   "ticketsSold": 564565,
+   "ticketsSold": 568714,
    "maxPerPerson": null,
    "closesAt": "2026-08-28T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 422,
-    "claimed": 218,
-    "remaining": 204,
-    "remainingValue": 2849.44,
+    "claimed": 220,
+    "remaining": 202,
+    "remainingValue": 2847.68,
     "totalValue": 6800,
     "prizes": [
      {
@@ -4932,7 +5382,7 @@
      {
       "value": 0.88,
       "qty": 300,
-      "found": 162
+      "found": 164
      }
     ],
     "exact": false
@@ -4955,15 +5405,15 @@
    "url": "https://odpcompetitions.com/competition/win-on-every-drop-2",
    "price": 1,
    "totalTickets": 150000,
-   "ticketsSold": 42918,
+   "ticketsSold": 42933,
    "maxPerPerson": null,
    "closesAt": "2026-09-04T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 150000,
-    "claimed": 42918,
-    "remaining": 107082,
-    "remainingValue": 71983,
+    "claimed": 42933,
+    "remaining": 107067,
+    "remainingValue": 71976.8,
     "totalValue": 104928.3,
     "prizes": [
      {
@@ -5019,22 +5469,22 @@
      {
       "value": 1,
       "qty": 10000,
-      "found": 2891
+      "found": 2893
      },
      {
       "value": 0.5,
       "qty": 40000,
-      "found": 11472
+      "found": 11475
      },
      {
       "value": 0.3,
       "qty": 49145,
-      "found": 14053
+      "found": 14060
      },
      {
       "value": 0.2,
       "qty": 50174,
-      "found": 14312
+      "found": 14315
      }
     ],
     "exact": false
@@ -5104,7 +5554,7 @@
    "url": "https://odpcompetitions.com/competition/the-great-bite-off-2",
    "price": 0.11,
    "totalTickets": 400000,
-   "ticketsSold": 203142,
+   "ticketsSold": 203548,
    "maxPerPerson": null,
    "closesAt": "2026-09-04T19:00:00.000Z",
    "endPrize": null,
@@ -5135,15 +5585,15 @@
    "url": "https://odpcompetitions.com/competition/cactus-cash",
    "price": 0.07,
    "totalTickets": 700000,
-   "ticketsSold": 297174,
+   "ticketsSold": 297557,
    "maxPerPerson": null,
    "closesAt": "2026-09-11T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 2755,
-    "claimed": 1150,
-    "remaining": 1605,
-    "remainingValue": 14988,
+    "claimed": 1155,
+    "remaining": 1600,
+    "remainingValue": 14985.5,
     "totalValue": 23900,
     "prizes": [
      {
@@ -5184,7 +5634,7 @@
      {
       "value": 0.5,
       "qty": 2500,
-      "found": 1054
+      "found": 1059
      }
     ],
     "exact": false
@@ -5207,7 +5657,7 @@
    "url": "https://odpcompetitions.com/competition/tropical-treasure-drop",
    "price": 1,
    "totalTickets": 50000,
-   "ticketsSold": 29420,
+   "ticketsSold": 29450,
    "maxPerPerson": null,
    "closesAt": "2026-09-11T19:00:00.000Z",
    "endPrize": null,
@@ -5238,15 +5688,15 @@
    "url": "https://odpcompetitions.com/competition/lucky-loot",
    "price": 0.45,
    "totalTickets": 45000,
-   "ticketsSold": 18937,
+   "ticketsSold": 18945,
    "maxPerPerson": null,
    "closesAt": "2026-09-11T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 5208,
-    "claimed": 2213,
-    "remaining": 2995,
-    "remainingValue": 6254,
+    "claimed": 2215,
+    "remaining": 2993,
+    "remainingValue": 6253.1,
     "totalValue": 11445,
     "prizes": [
      {
@@ -5272,7 +5722,7 @@
      {
       "value": 0.45,
       "qty": 5000,
-      "found": 2120
+      "found": 2122
      },
      {
       "value": 25,
@@ -5310,15 +5760,15 @@
    "url": "https://odpcompetitions.com/competition/penny-race-xl",
    "price": 0.01,
    "totalTickets": 4000000,
-   "ticketsSold": 2704389,
+   "ticketsSold": 2710559,
    "maxPerPerson": null,
    "closesAt": "2026-09-14T19:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 2039,
-    "claimed": 1412,
-    "remaining": 627,
-    "remainingValue": 5393.5,
+    "claimed": 1415,
+    "remaining": 624,
+    "remainingValue": 5392,
     "totalValue": 23225,
     "prizes": [
      {
@@ -5364,7 +5814,7 @@
      {
       "value": 0.5,
       "qty": 1800,
-      "found": 1253
+      "found": 1256
      }
     ],
     "exact": false
@@ -5387,7 +5837,7 @@
    "url": "https://odpcompetitions.com/competition/triple-cherries",
    "price": 0.03,
    "totalTickets": 1000000,
-   "ticketsSold": 479438,
+   "ticketsSold": 479714,
    "maxPerPerson": null,
    "closesAt": "2026-09-18T19:00:00.000Z",
    "endPrize": null,
@@ -5545,7 +5995,7 @@
    "url": "https://epiccompetitions.co.uk/competition/ps50000-tax-free-cash",
    "price": 0.99,
    "totalTickets": 99999,
-   "ticketsSold": 9380,
+   "ticketsSold": 9385,
    "maxPerPerson": null,
    "closesAt": "2026-08-30T21:00:00.000Z",
    "endPrize": {
@@ -5580,7 +6030,7 @@
    "url": "https://epiccompetitions.co.uk/competition/audi-rsq3-instant-wins",
    "price": 0.99,
    "totalTickets": 90000,
-   "ticketsSold": 17833,
+   "ticketsSold": 17845,
    "maxPerPerson": null,
    "closesAt": "2026-08-23T21:00:00.000Z",
    "endPrize": null,
@@ -5632,7 +6082,7 @@
    "url": "https://epiccompetitions.co.uk/competition/ps500-per-week-until-christmas",
    "price": 0.5,
    "totalTickets": 48000,
-   "ticketsSold": 7316,
+   "ticketsSold": 7394,
    "maxPerPerson": null,
    "closesAt": "2026-08-21T21:00:00.000Z",
    "endPrize": {
@@ -5667,15 +6117,15 @@
    "url": "https://epiccompetitions.co.uk/competition/epic-mega-cash-wheel-2",
    "price": 0.35,
    "totalTickets": 120000,
-   "ticketsSold": 7883,
+   "ticketsSold": 8392,
    "maxPerPerson": null,
    "closesAt": "2026-08-21T21:00:00.000Z",
    "endPrize": null,
    "instantWins": {
     "total": 1221,
-    "claimed": 85,
-    "remaining": 1136,
-    "remainingValue": 21919,
+    "claimed": 92,
+    "remaining": 1129,
+    "remainingValue": 21908,
     "totalValue": 22250,
     "prizes": [
      {
@@ -5721,12 +6171,12 @@
      {
       "value": 5,
       "qty": 200,
-      "found": 12
+      "found": 13
      },
      {
       "value": 1,
       "qty": 1000,
-      "found": 71
+      "found": 77
      }
     ],
     "exact": false
@@ -5780,7 +6230,7 @@
    "url": "https://epiccompetitions.co.uk/competition/epic-piggy-pot-23-jackpot-ps7697",
    "price": 0.25,
    "totalTickets": 13000,
-   "ticketsSold": 4334,
+   "ticketsSold": 4338,
    "maxPerPerson": null,
    "closesAt": "2026-08-20T14:00:00.000Z",
    "endPrize": {
@@ -6103,7 +6553,7 @@
    "url": "https://epiccompetitions.co.uk/competition/500-tickets-for-50k-cash-2",
    "price": 0.2,
    "totalTickets": 2500,
-   "ticketsSold": 279,
+   "ticketsSold": 284,
    "maxPerPerson": null,
    "closesAt": "2026-08-23T21:00:00.000Z",
    "endPrize": null,
@@ -6345,7 +6795,7 @@
    "url": "https://easybigwins.co.uk/competition/ps200k-prize-pot-ps80k-sell-out-bonus-win-ps15k-instant-cash",
    "price": 1,
    "totalTickets": 395000,
-   "ticketsSold": 1984,
+   "ticketsSold": 1988,
    "maxPerPerson": null,
    "closesAt": "2026-11-11T21:15:00.000Z",
    "endPrize": {
@@ -6507,7 +6957,7 @@
    "url": "https://easybigwins.co.uk/competition/ps5000-cash-10-x-ps500-instant-wins-5260-2",
    "price": 0.05,
    "totalTickets": 400000,
-   "ticketsSold": 171786,
+   "ticketsSold": 171906,
    "maxPerPerson": null,
    "closesAt": "2026-08-23T21:15:00.000Z",
    "endPrize": {
@@ -7265,391 +7715,13 @@
    "firstSeen": "2026-08-13T20:26:09.052Z"
   },
   {
-   "id": "caledonia:every-ticket-wins-balloon-pop",
-   "siteKey": "caledonia",
-   "title": "EVERY TICKET WINS - BALLOON POP",
-   "url": "https://caledoniacompetitions.co.uk/competition/every-ticket-wins-balloon-pop",
-   "price": 0.99,
-   "totalTickets": 32000,
-   "ticketsSold": 3549,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-20T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 31680,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-07-24T09:16:27.709Z"
-  },
-  {
-   "id": "caledonia:win-ps1000-plus-instant-wins-5",
-   "siteKey": "caledonia",
-   "title": "WIN £1000 PLUS INSTANT WINS!",
-   "url": "https://caledoniacompetitions.co.uk/competition/win-ps1000-plus-instant-wins-5",
-   "price": 0.99,
-   "totalTickets": 2500,
-   "ticketsSold": 420,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-03T19:00:00.000Z",
-   "endPrize": {
-    "desc": "Main prize (from title)",
-    "value": 1000,
-    "cashValue": 1000
-   },
-   "instantWins": {
-    "total": 5,
-    "claimed": 0,
-    "remaining": 5,
-    "remainingValue": 500,
-    "totalValue": 500,
-    "prizes": [
-     {
-      "value": 100,
-      "qty": 5,
-      "found": 0
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 2475,
-    "iwPoolValue": 500,
-    "endPrizeValue": 1000
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-14T18:17:45.629Z"
-  },
-  {
-   "id": "caledonia:summer-road-trip-instant-wins-2",
-   "siteKey": "caledonia",
-   "title": "SUMMER ROAD TRIP INSTANT WINS",
-   "url": "https://caledoniacompetitions.co.uk/competition/summer-road-trip-instant-wins-2",
-   "price": 0.05,
-   "totalTickets": 269999,
-   "ticketsSold": 115436,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-27T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 13499.95,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-07-31T09:57:14.118Z"
-  },
-  {
-   "id": "caledonia:win-the-ninja-luxe-cafe-plus",
-   "siteKey": "caledonia",
-   "title": "WIN THE NINJA LUXE CAFE PLUS",
-   "url": "https://caledoniacompetitions.co.uk/competition/win-the-ninja-luxe-cafe-plus",
-   "price": 1.29,
-   "totalTickets": 999,
-   "ticketsSold": 68,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-03T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": 8,
-    "claimed": 0,
-    "remaining": 8,
-    "remainingValue": 100,
-    "totalValue": 100,
-    "prizes": [
-     {
-      "value": 25,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "value": 5,
-      "qty": 5,
-      "found": 0
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 1288.71,
-    "iwPoolValue": 100,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-07T09:36:26.772Z"
-  },
-  {
-   "id": "caledonia:safe-cracker-instant-wins",
-   "siteKey": "caledonia",
-   "title": "SAFE CRACKER - INSTANT WINS",
-   "url": "https://caledoniacompetitions.co.uk/competition/safe-cracker-instant-wins",
-   "price": 0.03,
-   "totalTickets": 479999,
-   "ticketsSold": 271038,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-20T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 14399.97,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-07-24T09:16:27.709Z"
-  },
-  {
-   "id": "caledonia:1p-penny-pusher",
-   "siteKey": "caledonia",
-   "title": "1P Penny Pusher",
-   "url": "https://caledoniacompetitions.co.uk/competition/1p-penny-pusher",
-   "price": 0.01,
-   "totalTickets": 899999,
-   "ticketsSold": 105791,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-10T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 8999.99,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-14T18:17:45.629Z"
-  },
-  {
-   "id": "caledonia:mystery-nessie-hunt-instant-wins",
-   "siteKey": "caledonia",
-   "title": "MYSTERY NESSIE HUNT - INSTANT WINS!",
-   "url": "https://caledoniacompetitions.co.uk/competition/mystery-nessie-hunt-instant-wins",
-   "price": 0.03,
-   "totalTickets": 389999,
-   "ticketsSold": 321337,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-03T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 11699.97,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-07T09:36:26.772Z"
-  },
-  {
-   "id": "caledonia:bingo-bonanza-instant-wins",
-   "siteKey": "caledonia",
-   "title": "BINGO BONANZA - INSTANT WINS",
-   "url": "https://caledoniacompetitions.co.uk/competition/bingo-bonanza-instant-wins",
-   "price": 0.05,
-   "totalTickets": 333333,
-   "ticketsSold": 69767,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-10T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 16666.65,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-14T18:17:45.629Z"
-  },
-  {
-   "id": "caledonia:stick-or-twist-2",
-   "siteKey": "caledonia",
-   "title": "STICK OR TWIST",
-   "url": "https://caledoniacompetitions.co.uk/competition/stick-or-twist-2",
-   "price": 0.02,
-   "totalTickets": 20000,
-   "ticketsSold": 6752,
-   "maxPerPerson": null,
-   "closesAt": "2026-09-10T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 400,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-14T18:17:45.629Z"
-  },
-  {
-   "id": "caledonia:win-ps2500-cash",
-   "siteKey": "caledonia",
-   "title": "WIN £2500 CASH",
-   "url": "https://caledoniacompetitions.co.uk/competition/win-ps2500-cash",
-   "price": 0.99,
-   "totalTickets": 5999,
-   "ticketsSold": 2199,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-27T19:00:00.000Z",
-   "endPrize": {
-    "desc": "Main prize (from title)",
-    "value": 2500,
-    "cashValue": 2500
-   },
-   "instantWins": {
-    "total": 5,
-    "claimed": 4,
-    "remaining": 1,
-    "remainingValue": 250,
-    "totalValue": 1250,
-    "prizes": [
-     {
-      "value": 250,
-      "qty": 5,
-      "found": 4
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 5939.01,
-    "iwPoolValue": 1250,
-    "endPrizeValue": 2500
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-07-31T09:57:14.118Z"
-  },
-  {
-   "id": "caledonia:double-or-nothing-site-credit-9",
-   "siteKey": "caledonia",
-   "title": "DOUBLE OR NOTHING SITE CREDIT #9",
-   "url": "https://caledoniacompetitions.co.uk/competition/double-or-nothing-site-credit-9",
-   "price": 5,
-   "totalTickets": 400,
-   "ticketsSold": 251,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-27T19:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": 200,
-    "claimed": 120,
-    "remaining": 80,
-    "remainingValue": 800,
-    "totalValue": 2000,
-    "prizes": [
-     {
-      "value": 10,
-      "qty": 200,
-      "found": 120
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 2000,
-    "iwPoolValue": 2000,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-07-31T06:57:39.595Z"
-  },
-  {
    "id": "jetcomps:carnival-chaos",
    "siteKey": "jetcomps",
    "title": "CARNIVAL CHAOS",
    "url": "https://jetcomps.co.uk/competition/carnival-chaos",
    "price": 0.1,
    "totalTickets": 565342,
-   "ticketsSold": 191352,
+   "ticketsSold": 192386,
    "maxPerPerson": null,
    "closesAt": "2026-08-20T20:00:00.000Z",
    "endPrize": null,
@@ -7742,7 +7814,7 @@
    "url": "https://jetcomps.co.uk/competition/protur-safari-family-holiday",
    "price": 0.1,
    "totalTickets": 61200,
-   "ticketsSold": 13345,
+   "ticketsSold": 13352,
    "maxPerPerson": null,
    "closesAt": "2026-08-24T20:00:00.000Z",
    "endPrize": null,
@@ -7804,7 +7876,7 @@
    "url": "https://jetcomps.co.uk/competition/1kpm-or-10k",
    "price": 0.1,
    "totalTickets": 472499,
-   "ticketsSold": 121278,
+   "ticketsSold": 121308,
    "maxPerPerson": null,
    "closesAt": "2026-08-31T20:00:00.000Z",
    "endPrize": {
@@ -7839,7 +7911,7 @@
    "url": "https://jetcomps.co.uk/competition/pirates-village-family-holiday",
    "price": 0.05,
    "totalTickets": 305979,
-   "ticketsSold": 62587,
+   "ticketsSold": 62737,
    "maxPerPerson": null,
    "closesAt": "2026-09-03T20:00:00.000Z",
    "endPrize": null,
@@ -7901,7 +7973,7 @@
    "url": "https://jetcomps.co.uk/competition/fiesta-heatwave2",
    "price": 0.69,
    "totalTickets": 51413,
-   "ticketsSold": 8680,
+   "ticketsSold": 8710,
    "maxPerPerson": null,
    "closesAt": "2026-08-27T20:00:00.000Z",
    "endPrize": null,
@@ -7957,44 +8029,13 @@
    "firstSeen": "2026-08-02T16:43:50.431Z"
   },
   {
-   "id": "jetcomps:coconut-crack",
-   "siteKey": "jetcomps",
-   "title": "COCONUT CRACK",
-   "url": "https://jetcomps.co.uk/competition/coconut-crack",
-   "price": 0.15,
-   "totalTickets": 53333,
-   "ticketsSold": 21860,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-24T20:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": null,
-    "claimed": null,
-    "remaining": null,
-    "remainingValue": null,
-    "totalValue": null,
-    "prizes": [],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 7999.95,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-17T01:52:07.463Z"
-  },
-  {
    "id": "jetcomps:penny-pirates",
    "siteKey": "jetcomps",
    "title": "PENNY PIRATES 🏴‍☠️",
    "url": "https://jetcomps.co.uk/competition/penny-pirates",
    "price": 0.01,
    "totalTickets": 999999,
-   "ticketsSold": 220880,
+   "ticketsSold": 227945,
    "maxPerPerson": null,
    "closesAt": "2026-09-03T20:00:00.000Z",
    "endPrize": null,
@@ -8019,13 +8060,44 @@
    "firstSeen": "2026-08-17T18:56:53.869Z"
   },
   {
+   "id": "jetcomps:coconut-crack",
+   "siteKey": "jetcomps",
+   "title": "COCONUT CRACK",
+   "url": "https://jetcomps.co.uk/competition/coconut-crack",
+   "price": 0.15,
+   "totalTickets": 53333,
+   "ticketsSold": 21885,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-24T20:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 7999.95,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-17T01:52:07.463Z"
+  },
+  {
    "id": "jetcomps:supercharger",
    "siteKey": "jetcomps",
    "title": "SUPERCHARGER!",
    "url": "https://jetcomps.co.uk/competition/supercharger",
    "price": 0.02,
    "totalTickets": 399999,
-   "ticketsSold": 68518,
+   "ticketsSold": 68520,
    "maxPerPerson": null,
    "closesAt": "2026-08-27T20:00:00.000Z",
    "endPrize": null,
@@ -8067,7 +8139,7 @@
    "url": "https://jetcomps.co.uk/competition/proper-odd",
    "price": 0.07,
    "totalTickets": 489819,
-   "ticketsSold": 121927,
+   "ticketsSold": 122024,
    "maxPerPerson": null,
    "closesAt": "2026-08-31T20:00:00.000Z",
    "endPrize": null,
@@ -8098,7 +8170,7 @@
    "url": "https://jetcomps.co.uk/competition/old-macs-mystery-madness",
    "price": 0.05,
    "totalTickets": 564999,
-   "ticketsSold": 128983,
+   "ticketsSold": 129033,
    "maxPerPerson": null,
    "closesAt": "2026-08-31T20:00:00.000Z",
    "endPrize": null,
@@ -8123,13 +8195,391 @@
    "firstSeen": "2026-08-17T18:56:53.869Z"
   },
   {
+   "id": "caledonia:every-ticket-wins-balloon-pop",
+   "siteKey": "caledonia",
+   "title": "EVERY TICKET WINS - BALLOON POP",
+   "url": "https://caledoniacompetitions.co.uk/competition/every-ticket-wins-balloon-pop",
+   "price": 0.99,
+   "totalTickets": 32000,
+   "ticketsSold": 3574,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-20T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 31680,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-07-24T09:16:27.709Z"
+  },
+  {
+   "id": "caledonia:safe-cracker-instant-wins",
+   "siteKey": "caledonia",
+   "title": "SAFE CRACKER - INSTANT WINS",
+   "url": "https://caledoniacompetitions.co.uk/competition/safe-cracker-instant-wins",
+   "price": 0.03,
+   "totalTickets": 479999,
+   "ticketsSold": 271138,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-20T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 14399.97,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-07-24T09:16:27.709Z"
+  },
+  {
+   "id": "caledonia:mystery-nessie-hunt-instant-wins",
+   "siteKey": "caledonia",
+   "title": "MYSTERY NESSIE HUNT - INSTANT WINS!",
+   "url": "https://caledoniacompetitions.co.uk/competition/mystery-nessie-hunt-instant-wins",
+   "price": 0.03,
+   "totalTickets": 389999,
+   "ticketsSold": 321672,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-03T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 11699.97,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-07T09:36:26.772Z"
+  },
+  {
+   "id": "caledonia:summer-road-trip-instant-wins-2",
+   "siteKey": "caledonia",
+   "title": "SUMMER ROAD TRIP INSTANT WINS",
+   "url": "https://caledoniacompetitions.co.uk/competition/summer-road-trip-instant-wins-2",
+   "price": 0.05,
+   "totalTickets": 269999,
+   "ticketsSold": 115436,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-27T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 13499.95,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-07-31T09:57:14.118Z"
+  },
+  {
+   "id": "caledonia:win-ps2500-cash",
+   "siteKey": "caledonia",
+   "title": "WIN £2500 CASH",
+   "url": "https://caledoniacompetitions.co.uk/competition/win-ps2500-cash",
+   "price": 0.99,
+   "totalTickets": 5999,
+   "ticketsSold": 2199,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-27T19:00:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 2500,
+    "cashValue": 2500
+   },
+   "instantWins": {
+    "total": 5,
+    "claimed": 4,
+    "remaining": 1,
+    "remainingValue": 250,
+    "totalValue": 1250,
+    "prizes": [
+     {
+      "value": 250,
+      "qty": 5,
+      "found": 4
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 5939.01,
+    "iwPoolValue": 1250,
+    "endPrizeValue": 2500
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-07-31T09:57:14.118Z"
+  },
+  {
+   "id": "caledonia:bingo-bonanza-instant-wins",
+   "siteKey": "caledonia",
+   "title": "BINGO BONANZA - INSTANT WINS",
+   "url": "https://caledoniacompetitions.co.uk/competition/bingo-bonanza-instant-wins",
+   "price": 0.05,
+   "totalTickets": 333333,
+   "ticketsSold": 69767,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-10T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 16666.65,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-14T18:17:45.629Z"
+  },
+  {
+   "id": "caledonia:win-ps1000-plus-instant-wins-5",
+   "siteKey": "caledonia",
+   "title": "WIN £1000 PLUS INSTANT WINS!",
+   "url": "https://caledoniacompetitions.co.uk/competition/win-ps1000-plus-instant-wins-5",
+   "price": 0.99,
+   "totalTickets": 2500,
+   "ticketsSold": 420,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-03T19:00:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 1000,
+    "cashValue": 1000
+   },
+   "instantWins": {
+    "total": 5,
+    "claimed": 0,
+    "remaining": 5,
+    "remainingValue": 500,
+    "totalValue": 500,
+    "prizes": [
+     {
+      "value": 100,
+      "qty": 5,
+      "found": 0
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 2475,
+    "iwPoolValue": 500,
+    "endPrizeValue": 1000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-14T18:17:45.629Z"
+  },
+  {
+   "id": "caledonia:win-the-ninja-luxe-cafe-plus",
+   "siteKey": "caledonia",
+   "title": "WIN THE NINJA LUXE CAFE PLUS",
+   "url": "https://caledoniacompetitions.co.uk/competition/win-the-ninja-luxe-cafe-plus",
+   "price": 1.29,
+   "totalTickets": 999,
+   "ticketsSold": 68,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-03T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 8,
+    "claimed": 0,
+    "remaining": 8,
+    "remainingValue": 100,
+    "totalValue": 100,
+    "prizes": [
+     {
+      "value": 25,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 5,
+      "qty": 5,
+      "found": 0
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 1288.71,
+    "iwPoolValue": 100,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-07T09:36:26.772Z"
+  },
+  {
+   "id": "caledonia:stick-or-twist-2",
+   "siteKey": "caledonia",
+   "title": "STICK OR TWIST",
+   "url": "https://caledoniacompetitions.co.uk/competition/stick-or-twist-2",
+   "price": 0.02,
+   "totalTickets": 20000,
+   "ticketsSold": 6752,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-10T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 400,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-14T18:17:45.629Z"
+  },
+  {
+   "id": "caledonia:1p-penny-pusher",
+   "siteKey": "caledonia",
+   "title": "1P Penny Pusher",
+   "url": "https://caledoniacompetitions.co.uk/competition/1p-penny-pusher",
+   "price": 0.01,
+   "totalTickets": 899999,
+   "ticketsSold": 105916,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-10T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 8999.99,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-14T18:17:45.629Z"
+  },
+  {
+   "id": "caledonia:double-or-nothing-site-credit-9",
+   "siteKey": "caledonia",
+   "title": "DOUBLE OR NOTHING SITE CREDIT #9",
+   "url": "https://caledoniacompetitions.co.uk/competition/double-or-nothing-site-credit-9",
+   "price": 5,
+   "totalTickets": 400,
+   "ticketsSold": 251,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-27T19:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 200,
+    "claimed": 120,
+    "remaining": 80,
+    "remainingValue": 800,
+    "totalValue": 2000,
+    "prizes": [
+     {
+      "value": 10,
+      "qty": 200,
+      "found": 120
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 2000,
+    "iwPoolValue": 2000,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-07-31T06:57:39.595Z"
+  },
+  {
    "id": "luckypup:fin-tastic-fishh",
    "siteKey": "luckypup",
    "title": "FIN-TASTIC FISH",
    "url": "https://luckypupprizes.co.uk/competition/fin-tastic-fishh",
    "price": 0.5,
    "totalTickets": 29999,
-   "ticketsSold": 23402,
+   "ticketsSold": 23529,
    "maxPerPerson": null,
    "closesAt": "2026-09-18T21:00:00.000Z",
    "endPrize": null,
@@ -8212,7 +8662,7 @@
    "url": "https://luckypupprizes.co.uk/competition/angels-vs-demons",
    "price": 1.99,
    "totalTickets": 6666,
-   "ticketsSold": 5134,
+   "ticketsSold": 5172,
    "maxPerPerson": null,
    "closesAt": "2026-08-22T21:00:00.000Z",
    "endPrize": null,
@@ -8274,7 +8724,7 @@
    "url": "https://luckypupprizes.co.uk/competition/a-mystery-vip",
    "price": 1,
    "totalTickets": 16000,
-   "ticketsSold": 8907,
+   "ticketsSold": 8910,
    "maxPerPerson": null,
    "closesAt": "2026-08-27T21:00:00.000Z",
    "endPrize": null,
@@ -8361,7 +8811,7 @@
    "url": "https://luckypupprizes.co.uk/competition/beasty-bingo-78",
    "price": 12.5,
    "totalTickets": 18,
-   "ticketsSold": 3,
+   "ticketsSold": 9,
    "maxPerPerson": null,
    "closesAt": "2026-09-17T15:17:00.000Z",
    "endPrize": null,
@@ -8643,7 +9093,7 @@
    "url": "https://phatstax.co.uk/competition/watermelon-wins",
    "price": 0.02,
    "totalTickets": 361999,
-   "ticketsSold": 88031,
+   "ticketsSold": 88131,
    "maxPerPerson": null,
    "closesAt": "2026-08-30T21:00:00.000Z",
    "endPrize": {
@@ -8653,9 +9103,9 @@
    },
    "instantWins": {
     "total": 4687,
-    "claimed": 1133,
-    "remaining": 3554,
-    "remainingValue": 2552.2,
+    "claimed": 1135,
+    "remaining": 3552,
+    "remainingValue": 2551.5,
     "totalValue": 4950,
     "prizes": [
      {
@@ -8691,12 +9141,12 @@
      {
       "value": 0.5,
       "qty": 500,
-      "found": 119
+      "found": 120
      },
      {
       "value": 0.2,
       "qty": 2000,
-      "found": 482
+      "found": 483
      },
      {
       "value": 0.1,
@@ -8724,7 +9174,7 @@
    "url": "https://phatstax.co.uk/competition/ps50-x-50-instant-wins-ps50-end-prize-ps2500-instant-wins",
    "price": 0.05,
    "totalTickets": 111000,
-   "ticketsSold": 5898,
+   "ticketsSold": 5914,
    "maxPerPerson": null,
    "closesAt": "2026-09-06T21:00:00.000Z",
    "endPrize": {
@@ -8759,7 +9209,7 @@
    "url": "https://phatstax.co.uk/competition/grand-theft-otto-ps100-main-prize-ps7000-instant-wins",
    "price": 0.15,
    "totalTickets": 95000,
-   "ticketsSold": 699,
+   "ticketsSold": 719,
    "maxPerPerson": null,
    "closesAt": "2026-09-13T21:00:00.000Z",
    "endPrize": {
@@ -8977,7 +9427,7 @@
    "url": "https://phatstax.co.uk/competition/lucky-penny",
    "price": 0.01,
    "totalTickets": 999999,
-   "ticketsSold": 185363,
+   "ticketsSold": 186063,
    "maxPerPerson": null,
    "closesAt": "2026-08-30T21:00:00.000Z",
    "endPrize": {
@@ -8987,9 +9437,9 @@
    },
    "instantWins": {
     "total": 3124,
-    "claimed": 595,
-    "remaining": 2529,
-    "remainingValue": 5602.7,
+    "claimed": 599,
+    "remaining": 2525,
+    "remainingValue": 5602.3,
     "totalValue": 6950,
     "prizes": [
      {
@@ -9030,7 +9480,7 @@
      {
       "value": 0.1,
       "qty": 3000,
-      "found": 573
+      "found": 577
      }
     ],
     "exact": false
@@ -9233,13 +9683,427 @@
    "firstSeen": "2026-07-30T15:24:14.680Z"
   },
   {
+   "id": "southcoast:fortune-frenzy",
+   "siteKey": "southcoast",
+   "title": "Fortune Frenzy!!!",
+   "url": "https://southcoast-competitions.co.uk/competition/fortune-frenzy",
+   "price": 0.02,
+   "totalTickets": 993750,
+   "ticketsSold": 221339,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-01T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 562,
+    "claimed": 131,
+    "remaining": 431,
+    "remainingValue": 9631,
+    "totalValue": 11600,
+    "prizes": [
+     {
+      "value": 850,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 500,
+      "qty": 3,
+      "found": 1
+     },
+     {
+      "value": 250,
+      "qty": 8,
+      "found": 2
+     },
+     {
+      "value": 200,
+      "qty": 10,
+      "found": 1
+     },
+     {
+      "value": 100,
+      "qty": 23,
+      "found": 5
+     },
+     {
+      "value": 50,
+      "qty": 15,
+      "found": 3
+     },
+     {
+      "value": 1,
+      "qty": 500,
+      "found": 119
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 19875,
+    "iwPoolValue": 11600,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-18T21:06:31.496Z"
+  },
+  {
+   "id": "southcoast:ps250-cash-3",
+   "siteKey": "southcoast",
+   "title": "£250 CASH!",
+   "url": "https://southcoast-competitions.co.uk/competition/ps250-cash-3",
+   "price": 0.02,
+   "totalTickets": 25000,
+   "ticketsSold": 4493,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-25T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 250,
+    "cashValue": 250
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 500,
+    "iwPoolValue": 0,
+    "endPrizeValue": 250
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-18T21:06:31.496Z"
+  },
+  {
+   "id": "southcoast:cash-smash",
+   "siteKey": "southcoast",
+   "title": "CASH SMASH!",
+   "url": "https://southcoast-competitions.co.uk/competition/cash-smash",
+   "price": 0.1,
+   "totalTickets": 325000,
+   "ticketsSold": 160888,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-25T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 107,
+    "claimed": 62,
+    "remaining": 45,
+    "remainingValue": 6100,
+    "totalValue": 19325,
+    "prizes": [
+     {
+      "value": 1000,
+      "qty": 3,
+      "found": 2
+     },
+     {
+      "value": 575,
+      "qty": 1,
+      "found": 0
+     },
+     {
+      "value": 500,
+      "qty": 3,
+      "found": 2
+     },
+     {
+      "value": 300,
+      "qty": 8,
+      "found": 6
+     },
+     {
+      "value": 200,
+      "qty": 9,
+      "found": 5
+     },
+     {
+      "value": 100,
+      "qty": 30,
+      "found": 19
+     },
+     {
+      "value": 75,
+      "qty": 20,
+      "found": 9
+     },
+     {
+      "value": 50,
+      "qty": 31,
+      "found": 17
+     },
+     {
+      "value": 2000,
+      "qty": 2,
+      "found": 2
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 32500,
+    "iwPoolValue": 19325,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-04T21:48:40.243Z"
+  },
+  {
+   "id": "southcoast:win-a-defender-plus-100k-in-instant-wins",
+   "siteKey": "southcoast",
+   "title": "Win a Defender plus 100k in Instant wins!",
+   "url": "https://southcoast-competitions.co.uk/competition/win-a-defender-plus-100k-in-instant-wins",
+   "price": 0.4,
+   "totalTickets": 612000,
+   "ticketsSold": 35292,
+   "maxPerPerson": null,
+   "closesAt": "2026-10-06T21:00:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 1273,
+    "claimed": 73,
+    "remaining": 1200,
+    "remainingValue": 87328,
+    "totalValue": 100000,
+    "prizes": [
+     {
+      "value": 10000,
+      "qty": 2,
+      "found": 0
+     },
+     {
+      "value": 7500,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "value": 5000,
+      "qty": 2,
+      "found": 0
+     },
+     {
+      "value": 3000,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 2500,
+      "qty": 3,
+      "found": 1
+     },
+     {
+      "value": 2000,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 1000,
+      "qty": 12,
+      "found": 1
+     },
+     {
+      "value": 500,
+      "qty": 12,
+      "found": 2
+     },
+     {
+      "value": 250,
+      "qty": 10,
+      "found": 0
+     },
+     {
+      "value": 100,
+      "qty": 34,
+      "found": 1
+     },
+     {
+      "value": 75,
+      "qty": 20,
+      "found": 2
+     },
+     {
+      "value": 50,
+      "qty": 40,
+      "found": 3
+     },
+     {
+      "value": 20,
+      "qty": 80,
+      "found": 4
+     },
+     {
+      "value": 10,
+      "qty": 150,
+      "found": 9
+     },
+     {
+      "value": 5,
+      "qty": 150,
+      "found": 6
+     },
+     {
+      "value": 2,
+      "qty": 500,
+      "found": 29
+     },
+     {
+      "value": 1,
+      "qty": 250,
+      "found": 14
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 244800,
+    "iwPoolValue": 100000,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-15T22:02:41.844Z"
+  },
+  {
+   "id": "southcoast:10-x-ps100-instant-wins-ps1000-end-draw-2",
+   "siteKey": "southcoast",
+   "title": "10 x £100 Instant Wins, £1,000 End draw!",
+   "url": "https://southcoast-competitions.co.uk/competition/10-x-ps100-instant-wins-ps1000-end-draw-2",
+   "price": 0.01,
+   "totalTickets": 500000,
+   "ticketsSold": 387872,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-25T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 1000,
+    "cashValue": 1000
+   },
+   "instantWins": {
+    "total": 265,
+    "claimed": 207,
+    "remaining": 58,
+    "remainingValue": 255,
+    "totalValue": 1500,
+    "prizes": [
+     {
+      "value": 100,
+      "qty": 10,
+      "found": 9
+     },
+     {
+      "value": 50,
+      "qty": 5,
+      "found": 3
+     },
+     {
+      "value": 1,
+      "qty": 250,
+      "found": 195
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 5000,
+    "iwPoolValue": 1500,
+    "endPrizeValue": 1000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-04T21:48:40.243Z"
+  },
+  {
+   "id": "southcoast:the-cash-father",
+   "siteKey": "southcoast",
+   "title": "The Cash Father",
+   "url": "https://southcoast-competitions.co.uk/competition/the-cash-father",
+   "price": 0.05,
+   "totalTickets": 240000,
+   "ticketsSold": 93811,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-25T20:30:00.000Z",
+   "endPrize": null,
+   "instantWins": {
+    "total": 62,
+    "claimed": 25,
+    "remaining": 37,
+    "remainingValue": 2980,
+    "totalValue": 5410,
+    "prizes": [
+     {
+      "value": 500,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "value": 300,
+      "qty": 3,
+      "found": 2
+     },
+     {
+      "value": 100,
+      "qty": 4,
+      "found": 2
+     },
+     {
+      "value": 80,
+      "qty": 5,
+      "found": 1
+     },
+     {
+      "value": 70,
+      "qty": 7,
+      "found": 3
+     },
+     {
+      "value": 60,
+      "qty": 17,
+      "found": 4
+     },
+     {
+      "value": 50,
+      "qty": 24,
+      "found": 12
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 12000,
+    "iwPoolValue": 5410,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-10T20:28:48.794Z"
+  },
+  {
    "id": "kingofcomps:cleopatra-scratch-for-cash-3",
    "siteKey": "kingofcomps",
    "title": "Cleopatra Scratch for Cash",
    "url": "https://kingofcomps.co.uk/competition/cleopatra-scratch-for-cash-3",
    "price": 1,
    "totalTickets": 112500,
-   "ticketsSold": 42194,
+   "ticketsSold": 42206,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -9616,7 +10480,7 @@
    "url": "https://kingofcomps.co.uk/competition/grab-5-grand-4",
    "price": 2,
    "totalTickets": 50000,
-   "ticketsSold": 2523,
+   "ticketsSold": 2527,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -9729,7 +10593,7 @@
    "url": "https://kingofcomps.co.uk/competition/ps15000-tax-free-cash-for-15p-2",
    "price": 3.75,
    "totalTickets": 260000,
-   "ticketsSold": 903,
+   "ticketsSold": 928,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -9785,7 +10649,7 @@
    "url": "https://kingofcomps.co.uk/competition/the-britannia-coin-pot-drop",
    "price": 5,
    "totalTickets": 230000,
-   "ticketsSold": 30232,
+   "ticketsSold": 30274,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -9928,7 +10792,7 @@
    "url": "https://kingofcomps.co.uk/competition/pokemon-ps17000-instant-wins-30th-celebration-end-prize-2",
    "price": 2,
    "totalTickets": 17150,
-   "ticketsSold": 4446,
+   "ticketsSold": 4451,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -10161,7 +11025,7 @@
    "url": "https://kingofcomps.co.uk/competition/thursday-prize-every-time-3",
    "price": 2,
    "totalTickets": 3499,
-   "ticketsSold": 989,
+   "ticketsSold": 996,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -10323,7 +11187,7 @@
    "url": "https://kingofcomps.co.uk/competition/every-ticket-wins-20",
    "price": 2,
    "totalTickets": 11965,
-   "ticketsSold": 4384,
+   "ticketsSold": 4389,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -10588,86 +11452,19 @@
    "firstSeen": "2026-08-20T00:04:50.915Z"
   },
   {
-   "id": "southcoast:fortune-frenzy",
-   "siteKey": "southcoast",
-   "title": "Fortune Frenzy!!!",
-   "url": "https://southcoast-competitions.co.uk/competition/fortune-frenzy",
-   "price": 0.02,
-   "totalTickets": 993750,
-   "ticketsSold": 215831,
+   "id": "enhancedlife:bonkers-bundlz",
+   "siteKey": "enhancedlife",
+   "title": "Bonkers Bundles - £500 Ticket Bundle End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/bonkers-bundlz",
+   "price": 0.12,
+   "totalTickets": 103460,
+   "ticketsSold": 8226,
    "maxPerPerson": null,
-   "closesAt": "2026-09-01T20:30:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": 562,
-    "claimed": 126,
-    "remaining": 436,
-    "remainingValue": 9885,
-    "totalValue": 11600,
-    "prizes": [
-     {
-      "value": 850,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "value": 500,
-      "qty": 3,
-      "found": 1
-     },
-     {
-      "value": 250,
-      "qty": 8,
-      "found": 1
-     },
-     {
-      "value": 200,
-      "qty": 10,
-      "found": 1
-     },
-     {
-      "value": 100,
-      "qty": 23,
-      "found": 5
-     },
-     {
-      "value": 50,
-      "qty": 15,
-      "found": 3
-     },
-     {
-      "value": 1,
-      "qty": 500,
-      "found": 115
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 19875,
-    "iwPoolValue": 11600,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-18T21:06:31.496Z"
-  },
-  {
-   "id": "southcoast:ps250-cash-3",
-   "siteKey": "southcoast",
-   "title": "£250 CASH!",
-   "url": "https://southcoast-competitions.co.uk/competition/ps250-cash-3",
-   "price": 0.02,
-   "totalTickets": 25000,
-   "ticketsSold": 4490,
-   "maxPerPerson": null,
-   "closesAt": "2026-08-25T20:30:00.000Z",
+   "closesAt": "2026-08-23T19:30:00.000Z",
    "endPrize": {
     "desc": "Main prize (from title)",
-    "value": 250,
-    "cashValue": 250
+    "value": 500,
+    "cashValue": 500
    },
    "instantWins": {
     "total": null,
@@ -10680,277 +11477,728 @@
    },
    "structure": {
     "exact": false,
-    "selloutRevenue": 500,
+    "selloutRevenue": 12415.2,
     "iwPoolValue": 0,
-    "endPrizeValue": 250
+    "endPrizeValue": 500
    },
    "source": {
     "type": "livewire-dom"
    },
-   "firstSeen": "2026-08-18T21:06:31.496Z"
+   "firstSeen": "2026-08-20T11:10:56.657Z"
   },
   {
-   "id": "southcoast:cash-smash",
-   "siteKey": "southcoast",
-   "title": "CASH SMASH!",
-   "url": "https://southcoast-competitions.co.uk/competition/cash-smash",
-   "price": 0.1,
-   "totalTickets": 325000,
-   "ticketsSold": 159438,
+   "id": "enhancedlife:lifesabeach",
+   "siteKey": "enhancedlife",
+   "title": "LIFE’S A BEACH",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/lifesabeach",
+   "price": 0.25,
+   "totalTickets": 500000,
+   "ticketsSold": 168651,
    "maxPerPerson": null,
-   "closesAt": "2026-08-25T20:30:00.000Z",
+   "closesAt": "2026-09-06T20:30:00.000Z",
    "endPrize": null,
    "instantWins": {
-    "total": 107,
-    "claimed": 61,
-    "remaining": 46,
-    "remainingValue": 6150,
-    "totalValue": 19325,
+    "total": 943,
+    "claimed": 335,
+    "remaining": 608,
+    "remainingValue": 4919,
+    "totalValue": 8500,
     "prizes": [
      {
-      "value": 1000,
-      "qty": 3,
-      "found": 2
-     },
-     {
-      "value": 575,
-      "qty": 1,
-      "found": 0
-     },
-     {
       "value": 500,
-      "qty": 3,
-      "found": 2
-     },
-     {
-      "value": 300,
-      "qty": 8,
-      "found": 6
-     },
-     {
-      "value": 200,
-      "qty": 9,
-      "found": 5
-     },
-     {
-      "value": 100,
-      "qty": 30,
-      "found": 19
-     },
-     {
-      "value": 75,
-      "qty": 20,
-      "found": 9
-     },
-     {
-      "value": 50,
-      "qty": 31,
-      "found": 16
-     },
-     {
-      "value": 2000,
-      "qty": 2,
-      "found": 2
-     }
-    ],
-    "exact": false
-   },
-   "structure": {
-    "exact": false,
-    "selloutRevenue": 32500,
-    "iwPoolValue": 19325,
-    "endPrizeValue": 0
-   },
-   "source": {
-    "type": "livewire-dom"
-   },
-   "firstSeen": "2026-08-04T21:48:40.243Z"
-  },
-  {
-   "id": "southcoast:win-a-defender-plus-100k-in-instant-wins",
-   "siteKey": "southcoast",
-   "title": "Win a Defender plus 100k in Instant wins!",
-   "url": "https://southcoast-competitions.co.uk/competition/win-a-defender-plus-100k-in-instant-wins",
-   "price": 0.4,
-   "totalTickets": 612000,
-   "ticketsSold": 34918,
-   "maxPerPerson": null,
-   "closesAt": "2026-10-06T21:00:00.000Z",
-   "endPrize": null,
-   "instantWins": {
-    "total": 1273,
-    "claimed": 72,
-    "remaining": 1201,
-    "remainingValue": 87333,
-    "totalValue": 100000,
-    "prizes": [
-     {
-      "value": 10000,
-      "qty": 2,
-      "found": 0
-     },
-     {
-      "value": 7500,
-      "qty": 2,
-      "found": 1
-     },
-     {
-      "value": 5000,
-      "qty": 2,
-      "found": 0
-     },
-     {
-      "value": 3000,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "value": 2500,
-      "qty": 3,
-      "found": 1
-     },
-     {
-      "value": 2000,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "value": 1000,
-      "qty": 12,
-      "found": 1
-     },
-     {
-      "value": 500,
-      "qty": 12,
-      "found": 2
-     },
-     {
-      "value": 250,
-      "qty": 10,
-      "found": 0
-     },
-     {
-      "value": 100,
-      "qty": 34,
-      "found": 1
-     },
-     {
-      "value": 75,
-      "qty": 20,
-      "found": 2
-     },
-     {
-      "value": 50,
-      "qty": 40,
+      "qty": 5,
       "found": 3
      },
      {
-      "value": 20,
-      "qty": 80,
-      "found": 4
+      "value": 250,
+      "qty": 8,
+      "found": 2
      },
      {
-      "value": 10,
-      "qty": 150,
-      "found": 9
-     },
-     {
-      "value": 5,
-      "qty": 150,
+      "value": 100,
+      "qty": 10,
       "found": 5
      },
      {
-      "value": 2,
-      "qty": 500,
-      "found": 29
+      "value": 50,
+      "qty": 20,
+      "found": 8
+     },
+     {
+      "value": 25,
+      "qty": 25,
+      "found": 7
+     },
+     {
+      "value": 5,
+      "qty": 125,
+      "found": 49
      },
      {
       "value": 1,
-      "qty": 250,
-      "found": 14
+      "qty": 750,
+      "found": 261
      }
     ],
     "exact": false
    },
    "structure": {
     "exact": false,
-    "selloutRevenue": 244800,
-    "iwPoolValue": 100000,
+    "selloutRevenue": 125000,
+    "iwPoolValue": 8500,
     "endPrizeValue": 0
    },
    "source": {
     "type": "livewire-dom"
    },
-   "firstSeen": "2026-08-15T22:02:41.844Z"
+   "firstSeen": "2026-08-20T11:10:56.657Z"
   },
   {
-   "id": "southcoast:10-x-ps100-instant-wins-ps1000-end-draw-2",
-   "siteKey": "southcoast",
-   "title": "10 x £100 Instant Wins, £1,000 End draw!",
-   "url": "https://southcoast-competitions.co.uk/competition/10-x-ps100-instant-wins-ps1000-end-draw-2",
-   "price": 0.01,
-   "totalTickets": 500000,
-   "ticketsSold": 387372,
+   "id": "enhancedlife:maths-isnt-mathing",
+   "siteKey": "enhancedlife",
+   "title": "Maths Isn’t Mathing - 14 End Winners Of £321.86",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/maths-isnt-mathing",
+   "price": 0.15,
+   "totalTickets": 448669,
+   "ticketsSold": 234496,
    "maxPerPerson": null,
-   "closesAt": "2026-08-25T20:30:00.000Z",
+   "closesAt": "2026-09-27T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 321.86,
+    "cashValue": 321.86
+   },
+   "instantWins": {
+    "total": 1260,
+    "claimed": 655,
+    "remaining": 605,
+    "remainingValue": 20347.66,
+    "totalValue": 43171.96,
+    "prizes": [
+     {
+      "value": 2738.19,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "value": 1607.67,
+      "qty": 2,
+      "found": 0
+     },
+     {
+      "value": 938.18,
+      "qty": 4,
+      "found": 0
+     },
+     {
+      "value": 794.64,
+      "qty": 4,
+      "found": 1
+     },
+     {
+      "value": 652.11,
+      "qty": 6,
+      "found": 3
+     },
+     {
+      "value": 511.48,
+      "qty": 8,
+      "found": 4
+     },
+     {
+      "value": 363.78,
+      "qty": 10,
+      "found": 6
+     },
+     {
+      "value": 124.09,
+      "qty": 10,
+      "found": 2
+     },
+     {
+      "value": 84.54,
+      "qty": 15,
+      "found": 7
+     },
+     {
+      "value": 46.03,
+      "qty": 20,
+      "found": 10
+     },
+     {
+      "value": 16.16,
+      "qty": 25,
+      "found": 12
+     },
+     {
+      "value": 7.12,
+      "qty": 50,
+      "found": 27
+     },
+     {
+      "value": 3.87,
+      "qty": 100,
+      "found": 58
+     },
+     {
+      "value": 0.28,
+      "qty": 1000,
+      "found": 520
+     },
+     {
+      "value": 3422.34,
+      "qty": 2,
+      "found": 2
+     },
+     {
+      "value": 2102.69,
+      "qty": 2,
+      "found": 2
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 67300.35,
+    "iwPoolValue": 43171.96,
+    "endPrizeValue": 321.86
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:taste-the-rainbow",
+   "siteKey": "enhancedlife",
+   "title": "Taste The Rainbow - £2000 End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/taste-the-rainbow",
+   "price": 0.25,
+   "totalTickets": 200000,
+   "ticketsSold": 98146,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 2000,
+    "cashValue": 2000
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 50000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 2000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:grab-a-grand",
+   "siteKey": "enhancedlife",
+   "title": "Grab A Grand - 50 x £1000 Instant Wins & A £1000 End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/grab-a-grand",
+   "price": 0.07,
+   "totalTickets": 1450000,
+   "ticketsSold": 191707,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-27T20:30:00.000Z",
    "endPrize": {
     "desc": "Main prize (from title)",
     "value": 1000,
     "cashValue": 1000
    },
    "instantWins": {
-    "total": 265,
-    "claimed": 207,
-    "remaining": 58,
-    "remainingValue": 255,
-    "totalValue": 1500,
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 101500,
+    "iwPoolValue": 0,
+    "endPrizeValue": 1000
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:connors-cash-cow-2-x-ps250-end-prizes",
+   "siteKey": "enhancedlife",
+   "title": "Connors Cash Cow - 2 x £250 End Prizes",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/connors-cash-cow-2-x-ps250-end-prizes",
+   "price": 0.03,
+   "totalTickets": 700000,
+   "ticketsSold": 147402,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 250,
+    "cashValue": 250
+   },
+   "instantWins": {
+    "total": 586,
+    "claimed": 115,
+    "remaining": 471,
+    "remainingValue": 9572,
+    "totalValue": 10500,
     "prizes": [
+     {
+      "value": 750,
+      "qty": 4,
+      "found": 0
+     },
+     {
+      "value": 500,
+      "qty": 4,
+      "found": 0
+     },
+     {
+      "value": 250,
+      "qty": 8,
+      "found": 1
+     },
      {
       "value": 100,
       "qty": 10,
-      "found": 9
-     },
-     {
-      "value": 50,
-      "qty": 5,
       "found": 3
      },
      {
+      "value": 50,
+      "qty": 20,
+      "found": 3
+     },
+     {
+      "value": 25,
+      "qty": 40,
+      "found": 5
+     },
+     {
       "value": 1,
-      "qty": 250,
-      "found": 195
+      "qty": 500,
+      "found": 103
      }
     ],
     "exact": false
    },
    "structure": {
     "exact": false,
-    "selloutRevenue": 5000,
-    "iwPoolValue": 1500,
-    "endPrizeValue": 1000
+    "selloutRevenue": 21000,
+    "iwPoolValue": 10500,
+    "endPrizeValue": 250
    },
    "source": {
     "type": "livewire-dom"
    },
-   "firstSeen": "2026-08-04T21:48:40.243Z"
+   "firstSeen": "2026-08-20T11:10:56.657Z"
   },
   {
-   "id": "southcoast:the-cash-father",
-   "siteKey": "southcoast",
-   "title": "The Cash Father",
-   "url": "https://southcoast-competitions.co.uk/competition/the-cash-father",
-   "price": 0.05,
-   "totalTickets": 240000,
-   "ticketsSold": 93291,
+   "id": "enhancedlife:wack-a-win-ps250-end-prize",
+   "siteKey": "enhancedlife",
+   "title": "Wack-A-Win - £250 End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/wack-a-win-ps250-end-prize",
+   "price": 0.08,
+   "totalTickets": 35000,
+   "ticketsSold": 6114,
    "maxPerPerson": null,
-   "closesAt": "2026-08-25T20:30:00.000Z",
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 250,
+    "cashValue": 250
+   },
+   "instantWins": {
+    "total": 100,
+    "claimed": 12,
+    "remaining": 88,
+    "remainingValue": 1190,
+    "totalValue": 1550,
+    "prizes": [
+     {
+      "value": 250,
+      "qty": 2,
+      "found": 1
+     },
+     {
+      "value": 100,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 50,
+      "qty": 5,
+      "found": 1
+     },
+     {
+      "value": 25,
+      "qty": 10,
+      "found": 1
+     },
+     {
+      "value": 10,
+      "qty": 10,
+      "found": 2
+     },
+     {
+      "value": 5,
+      "qty": 20,
+      "found": 2
+     },
+     {
+      "value": 1,
+      "qty": 50,
+      "found": 5
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 2800,
+    "iwPoolValue": 1550,
+    "endPrizeValue": 250
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:world-of-enhanced",
+   "siteKey": "enhancedlife",
+   "title": "The Wonderful World Of Enhanced - 3 x £300 End Prizes",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/world-of-enhanced",
+   "price": 0.3,
+   "totalTickets": 80000,
+   "ticketsSold": 4255,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 300,
+    "cashValue": 300
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 24000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 300
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:bmw-330i",
+   "siteKey": "enhancedlife",
+   "title": "BMW 330i M Sport or £12,500!",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/bmw-330i",
+   "price": 0.69,
+   "totalTickets": 50000,
+   "ticketsSold": 1337,
+   "maxPerPerson": null,
+   "closesAt": "2026-09-20T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 12500,
+    "cashValue": 12500
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 34500,
+    "iwPoolValue": 0,
+    "endPrizeValue": 12500
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:choc-factory-ps500-end-prize",
+   "siteKey": "enhancedlife",
+   "title": "Connor And The Chocolate Factory - £500 End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/choc-factory-ps500-end-prize",
+   "price": 0.2,
+   "totalTickets": 100000,
+   "ticketsSold": 4570,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 500,
+    "cashValue": 500
+   },
+   "instantWins": {
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 20000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 500
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:surron",
+   "siteKey": "enhancedlife",
+   "title": "SUCKER FOR A SURRON",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/surron",
+   "price": 0.3,
+   "totalTickets": 200000,
+   "ticketsSold": 3684,
+   "maxPerPerson": null,
+   "closesAt": "2026-11-29T20:30:00.000Z",
    "endPrize": null,
    "instantWins": {
-    "total": 62,
-    "claimed": 25,
-    "remaining": 37,
-    "remainingValue": 2980,
-    "totalValue": 5410,
+    "total": null,
+    "claimed": null,
+    "remaining": null,
+    "remainingValue": null,
+    "totalValue": null,
+    "prizes": [],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 60000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:devilish-wins",
+   "siteKey": "enhancedlife",
+   "title": "Devilish Wins Angelic Delights - 5 x £1111 End Prizes",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/devilish-wins",
+   "price": 0.66,
+   "totalTickets": 222222,
+   "ticketsSold": 1492,
+   "maxPerPerson": null,
+   "closesAt": "2026-11-01T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 1111,
+    "cashValue": 1111
+   },
+   "instantWins": {
+    "total": 6377,
+    "claimed": 42,
+    "remaining": 6335,
+    "remainingValue": 66517.16,
+    "totalValue": 66666.06,
+    "prizes": [
+     {
+      "value": 3333,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 2222,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 1111,
+      "qty": 11,
+      "found": 0
+     },
+     {
+      "value": 999,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 888,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 777,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 666,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 555,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 444,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 333,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 222,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 111,
+      "qty": 6,
+      "found": 1
+     },
+     {
+      "value": 99,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 88,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 77,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 66,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 55,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 44,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 33,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 22,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "value": 11,
+      "qty": 66,
+      "found": 1
+     },
+     {
+      "value": 6,
+      "qty": 66,
+      "found": 0
+     },
+     {
+      "value": 1.11,
+      "qty": 666,
+      "found": 6
+     },
+     {
+      "value": 0.66,
+      "qty": 4444,
+      "found": 30
+     },
+     {
+      "value": 0.11,
+      "qty": 1016,
+      "found": 4
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 146666.52,
+    "iwPoolValue": 66666.06,
+    "endPrizeValue": 1111
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:candy-slots-ps250-end-prize",
+   "siteKey": "enhancedlife",
+   "title": "Candy Slots - £250 End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/candy-slots-ps250-end-prize",
+   "price": 0.25,
+   "totalTickets": 30000,
+   "ticketsSold": 6725,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-23T20:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 250,
+    "cashValue": 250
+   },
+   "instantWins": {
+    "total": 2394,
+    "claimed": 534,
+    "remaining": 1860,
+    "remainingValue": 2847.5,
+    "totalValue": 3762.5,
     "prizes": [
      {
       "value": 500,
@@ -10958,48 +12206,114 @@
       "found": 1
      },
      {
-      "value": 300,
+      "value": 250,
       "qty": 3,
-      "found": 2
+      "found": 0
      },
      {
       "value": 100,
       "qty": 4,
-      "found": 2
-     },
-     {
-      "value": 80,
-      "qty": 5,
-      "found": 1
-     },
-     {
-      "value": 70,
-      "qty": 7,
-      "found": 3
-     },
-     {
-      "value": 60,
-      "qty": 17,
-      "found": 4
+      "found": 0
      },
      {
       "value": 50,
-      "qty": 24,
-      "found": 12
+      "qty": 5,
+      "found": 2
+     },
+     {
+      "value": 25,
+      "qty": 10,
+      "found": 3
+     },
+     {
+      "value": 10,
+      "qty": 20,
+      "found": 4
+     },
+     {
+      "value": 1,
+      "qty": 100,
+      "found": 25
+     },
+     {
+      "value": 0.5,
+      "qty": 1000,
+      "found": 201
+     },
+     {
+      "value": 0.25,
+      "qty": 1250,
+      "found": 298
      }
     ],
     "exact": false
    },
    "structure": {
     "exact": false,
-    "selloutRevenue": 12000,
-    "iwPoolValue": 5410,
-    "endPrizeValue": 0
+    "selloutRevenue": 7500,
+    "iwPoolValue": 3762.5,
+    "endPrizeValue": 250
    },
    "source": {
     "type": "livewire-dom"
    },
-   "firstSeen": "2026-08-10T20:28:48.794Z"
+   "firstSeen": "2026-08-20T11:10:56.657Z"
+  },
+  {
+   "id": "enhancedlife:bmw-330i-cash-vs-tickets",
+   "siteKey": "enhancedlife",
+   "title": "BMW 330i Cash VS Tickets - £100 Worth Of Tickets End Prize",
+   "url": "https://enhancedlifecompetitions.co.uk/competition/bmw-330i-cash-vs-tickets",
+   "price": 0.02,
+   "totalTickets": 500000,
+   "ticketsSold": 54116,
+   "maxPerPerson": null,
+   "closesAt": "2026-08-30T19:30:00.000Z",
+   "endPrize": {
+    "desc": "Main prize (from title)",
+    "value": 100,
+    "cashValue": 100
+   },
+   "instantWins": {
+    "total": 34,
+    "claimed": 3,
+    "remaining": 31,
+    "remainingValue": 4300,
+    "totalValue": 4450,
+    "prizes": [
+     {
+      "value": 500,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "value": 250,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "value": 100,
+      "qty": 8,
+      "found": 0
+     },
+     {
+      "value": 50,
+      "qty": 18,
+      "found": 3
+     }
+    ],
+    "exact": false
+   },
+   "structure": {
+    "exact": false,
+    "selloutRevenue": 10000,
+    "iwPoolValue": 4450,
+    "endPrizeValue": 100
+   },
+   "source": {
+    "type": "livewire-dom"
+   },
+   "firstSeen": "2026-08-20T11:10:56.657Z"
   }
  ]
 }
