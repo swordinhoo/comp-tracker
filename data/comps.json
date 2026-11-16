@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T00:24:39.024Z",
+ "updatedAt": "2026-11-16T07:18:58.010Z",
  "sample": false,
  "sites": [
   {
@@ -184,28 +184,64 @@
    "firstSeen": "2026-11-01T08:10:48.988Z"
   },
   {
+   "id": "carley:golden-ball-tester",
+   "siteKey": "carley",
+   "title": "GOLDEN BALL TESTER",
+   "url": "https://carleycomps.co.uk/competition/golden-ball-tester",
+   "price": 0.01,
+   "totalTickets": 1000000,
+   "ticketsSold": 0,
+   "maxPerPerson": null,
+   "closesAt": "2026-10-22T20:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 0,
+    "claimed": 0,
+    "remaining": 0,
+    "remainingValue": 0,
+    "totalValue": 0,
+    "prizes": [],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 10000,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 0,
+    "rtpWithEnd": 0
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 10000,
+    "rtpIwOnly": 0,
+    "soldPct": 0
+   },
+   "firstSeen": "2026-10-08T10:28:24.427Z"
+  },
+  {
    "id": "carley:another-game-still-not-inspired-by-anything",
    "siteKey": "carley",
    "title": "🐍 ANOTHER GAME... STILL NOT INSPIRED BY ANYTHING 👀🍎🎮",
    "url": "https://carleycomps.co.uk/competition/another-game-still-not-inspired-by-anything",
    "price": 0.09,
    "totalTickets": 99999,
-   "ticketsSold": 22209,
+   "ticketsSold": 22513,
    "maxPerPerson": 9999,
    "closesAt": "2026-12-14T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 2218,
-    "claimed": 518,
-    "remaining": 1700,
-    "remainingValue": 4800,
+    "claimed": 525,
+    "remaining": 1693,
+    "remainingValue": 4294,
     "totalValue": 6550,
     "prizes": [
      {
       "name": "£500 CASH",
       "value": 500,
       "qty": 3,
-      "found": 1
+      "found": 2
      },
      {
       "name": "£250 CASH",
@@ -241,7 +277,7 @@
       "name": "£1 CASH",
       "value": 1,
       "qty": 2000,
-      "found": 465
+      "found": 471
      }
     ],
     "exact": true
@@ -251,22 +287,143 @@
     "selloutRevenue": 8999.91,
     "iwPoolValue": 6550,
     "endPrizeValue": 0,
-    "rtpIwOnly": 68.56,
-    "rtpWithEnd": 69.12
+    "rtpIwOnly": 61.57,
+    "rtpWithEnd": 62.13
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 7001.1,
-    "rtpIwOnly": 68.56,
-    "soldPct": 22.21
+    "buyoutCost": 6973.74,
+    "rtpIwOnly": 61.57,
+    "soldPct": 22.51
    },
    "firstSeen": "2026-10-29T15:38:25.077Z"
   },
   {
-   "id": "carley:golden-ball-tester",
+   "id": "carley:coin-flipper-big-chicken-dipper-win-up-to-ps1000-instantly",
    "siteKey": "carley",
-   "title": "GOLDEN BALL TESTER",
-   "url": "https://carleycomps.co.uk/competition/golden-ball-tester",
+   "title": "COIN FLIPPER: BIG CHICKEN DIPPER!  🪙🐔 WIN UP TO £1,000 INSTANTLY! 💰",
+   "url": "https://carleycomps.co.uk/competition/coin-flipper-big-chicken-dipper-win-up-to-ps1000-instantly",
+   "price": 0.49,
+   "totalTickets": 119999,
+   "ticketsSold": 6172,
+   "maxPerPerson": 11999,
+   "closesAt": "2026-11-16T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 10885,
+    "claimed": 584,
+    "remaining": 10301,
+    "remainingValue": 33368.5,
+    "totalValue": 35000,
+    "prizes": [
+     {
+      "name": "£1,000 CASH🐔",
+      "value": 0,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "name": "£500 CASH🐔",
+      "value": 500,
+      "qty": 10,
+      "found": 0
+     },
+     {
+      "name": "£250 CASH🐔",
+      "value": 250,
+      "qty": 20,
+      "found": 1
+     },
+     {
+      "name": "£100 CASH🐔",
+      "value": 100,
+      "qty": 50,
+      "found": 4
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 100,
+      "found": 5
+     },
+     {
+      "name": "£25 CASH",
+      "value": 25,
+      "qty": 200,
+      "found": 10
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 500,
+      "found": 21
+     },
+     {
+      "name": "£0.50 CASH",
+      "value": 0.5,
+      "qty": 10000,
+      "found": 543
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 58799.51,
+    "iwPoolValue": 35000,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 59.83,
+    "rtpWithEnd": 59.91
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 55775.23,
+    "rtpIwOnly": 59.83,
+    "soldPct": 5.14
+   },
+   "firstSeen": "2026-10-07T12:06:45.494Z"
+  },
+  {
+   "id": "carley:ps50-amazon-voucher-2",
+   "siteKey": "carley",
+   "title": "£50 AMAZON VOUCHER",
+   "url": "https://carleycomps.co.uk/competition/ps50-amazon-voucher-2",
+   "price": 0.04,
+   "totalTickets": 2500,
+   "ticketsSold": 248,
+   "maxPerPerson": 250,
+   "closesAt": "2026-11-19T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 0,
+    "claimed": 0,
+    "remaining": 0,
+    "remainingValue": 0,
+    "totalValue": 0,
+    "prizes": [],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 100,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 0,
+    "rtpWithEnd": 0
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 90.08,
+    "rtpIwOnly": 0,
+    "soldPct": 9.92
+   },
+   "firstSeen": "2026-11-05T21:36:39.914Z"
+  },
+  {
+   "id": "carley:main-golden-ball",
+   "siteKey": "carley",
+   "title": "MAIN GOLDEN BALL",
+   "url": "https://carleycomps.co.uk/competition/main-golden-ball",
    "price": 0.01,
    "totalTickets": 1000000,
    "ticketsSold": 0,
@@ -305,7 +462,7 @@
    "url": "https://carleycomps.co.uk/competition/the-luck-of-the-irish-win-up-to-ps250",
    "price": 0.09,
    "totalTickets": 59999,
-   "ticketsSold": 7525,
+   "ticketsSold": 7536,
    "maxPerPerson": 59999,
    "closesAt": "2026-12-04T18:00:00+00:00",
    "endPrize": null,
@@ -366,173 +523,16 @@
     "selloutRevenue": 5399.91,
     "iwPoolValue": 3100,
     "endPrizeValue": 0,
-    "rtpIwOnly": 60.77,
-    "rtpWithEnd": 74.94
+    "rtpIwOnly": 60.78,
+    "rtpWithEnd": 74.95
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 4722.66,
-    "rtpIwOnly": 60.77,
-    "soldPct": 12.54
+    "buyoutCost": 4721.67,
+    "rtpIwOnly": 60.78,
+    "soldPct": 12.56
    },
    "firstSeen": "2026-10-19T07:38:28.516Z"
-  },
-  {
-   "id": "carley:ps50-amazon-voucher-2",
-   "siteKey": "carley",
-   "title": "£50 AMAZON VOUCHER",
-   "url": "https://carleycomps.co.uk/competition/ps50-amazon-voucher-2",
-   "price": 0.04,
-   "totalTickets": 2500,
-   "ticketsSold": 248,
-   "maxPerPerson": 250,
-   "closesAt": "2026-11-19T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 0,
-    "claimed": 0,
-    "remaining": 0,
-    "remainingValue": 0,
-    "totalValue": 0,
-    "prizes": [],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 100,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 0,
-    "rtpWithEnd": 0
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 90.08,
-    "rtpIwOnly": 0,
-    "soldPct": 9.92
-   },
-   "firstSeen": "2026-11-05T21:36:39.914Z"
-  },
-  {
-   "id": "carley:coin-flipper-big-chicken-dipper-win-up-to-ps1000-instantly",
-   "siteKey": "carley",
-   "title": "COIN FLIPPER: BIG CHICKEN DIPPER!  🪙🐔 WIN UP TO £1,000 INSTANTLY! 💰",
-   "url": "https://carleycomps.co.uk/competition/coin-flipper-big-chicken-dipper-win-up-to-ps1000-instantly",
-   "price": 0.49,
-   "totalTickets": 119999,
-   "ticketsSold": 6146,
-   "maxPerPerson": 11999,
-   "closesAt": "2026-11-16T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 10885,
-    "claimed": 579,
-    "remaining": 10306,
-    "remainingValue": 33371,
-    "totalValue": 35000,
-    "prizes": [
-     {
-      "name": "£1,000 CASH🐔",
-      "value": 0,
-      "qty": 5,
-      "found": 0
-     },
-     {
-      "name": "£500 CASH🐔",
-      "value": 500,
-      "qty": 10,
-      "found": 0
-     },
-     {
-      "name": "£250 CASH🐔",
-      "value": 250,
-      "qty": 20,
-      "found": 1
-     },
-     {
-      "name": "£100 CASH🐔",
-      "value": 100,
-      "qty": 50,
-      "found": 4
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 100,
-      "found": 5
-     },
-     {
-      "name": "£25 CASH",
-      "value": 25,
-      "qty": 200,
-      "found": 10
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 500,
-      "found": 21
-     },
-     {
-      "name": "£0.50 CASH",
-      "value": 0.5,
-      "qty": 10000,
-      "found": 538
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 58799.51,
-    "iwPoolValue": 35000,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 59.82,
-    "rtpWithEnd": 59.9
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 55787.97,
-    "rtpIwOnly": 59.82,
-    "soldPct": 5.12
-   },
-   "firstSeen": "2026-10-07T12:06:45.494Z"
-  },
-  {
-   "id": "carley:main-golden-ball",
-   "siteKey": "carley",
-   "title": "MAIN GOLDEN BALL",
-   "url": "https://carleycomps.co.uk/competition/main-golden-ball",
-   "price": 0.01,
-   "totalTickets": 1000000,
-   "ticketsSold": 0,
-   "maxPerPerson": null,
-   "closesAt": "2026-10-22T20:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 0,
-    "claimed": 0,
-    "remaining": 0,
-    "remainingValue": 0,
-    "totalValue": 0,
-    "prizes": [],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 10000,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 0,
-    "rtpWithEnd": 0
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 10000,
-    "rtpIwOnly": 0,
-    "soldPct": 0
-   },
-   "firstSeen": "2026-10-08T10:28:24.427Z"
   },
   {
    "id": "carley:win-a-ps5-with-2-controllers",
@@ -541,7 +541,7 @@
    "url": "https://carleycomps.co.uk/competition/win-a-ps5-with-2-controllers",
    "price": 0.02,
    "totalTickets": 64000,
-   "ticketsSold": 13294,
+   "ticketsSold": 13302,
    "maxPerPerson": null,
    "closesAt": "2026-11-16T18:00:00+00:00",
    "endPrize": null,
@@ -564,28 +564,198 @@
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 1014.12,
+    "buyoutCost": 1013.96,
     "rtpIwOnly": 0,
-    "soldPct": 20.77
+    "soldPct": 20.78
    },
    "firstSeen": "2026-11-05T21:36:39.914Z"
+  },
+  {
+   "id": "carley:the-domino-dash-win-up-to-ps1500-instantly",
+   "siteKey": "carley",
+   "title": "🎲 THE DOMINO DASH – WIN UP TO £1,500 INSTANTLY",
+   "url": "https://carleycomps.co.uk/competition/the-domino-dash-win-up-to-ps1500-instantly",
+   "price": 0.09,
+   "totalTickets": 219999,
+   "ticketsSold": 0,
+   "maxPerPerson": 21999,
+   "closesAt": "2026-12-07T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 6493,
+    "claimed": 0,
+    "remaining": 6493,
+    "remainingValue": 13050,
+    "totalValue": 13050,
+    "prizes": [
+     {
+      "name": "£1,500 CASH",
+      "value": 1500,
+      "qty": 3,
+      "found": 0
+     },
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 4,
+      "found": 0
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 75,
+      "found": 0
+     },
+     {
+      "name": "£5 CASH",
+      "value": 5,
+      "qty": 400,
+      "found": 0
+     },
+     {
+      "name": "£0.50 CASH",
+      "value": 0.5,
+      "qty": 6000,
+      "found": 0
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 19799.91,
+    "iwPoolValue": 13050,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 65.91,
+    "rtpWithEnd": 61.69
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 19799.91,
+    "rtpIwOnly": 65.91,
+    "soldPct": 0
+   },
+   "firstSeen": "2026-11-10T00:53:41.328Z"
+  },
+  {
+   "id": "carley:call-me-the-zookeeper-win-up-to-ps100-instantly",
+   "siteKey": "carley",
+   "title": "🦁🐯 CALL ME THE ZOOKEEPER! 🐍🦍 Win Up to £100 Instantly! 💰🔥",
+   "url": "https://carleycomps.co.uk/competition/call-me-the-zookeeper-win-up-to-ps100-instantly",
+   "price": 0.1,
+   "totalTickets": 49999,
+   "ticketsSold": 7946,
+   "maxPerPerson": 4999,
+   "closesAt": "2026-11-20T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 2165,
+    "claimed": 346,
+    "remaining": 1819,
+    "remainingValue": 2924.8,
+    "totalValue": 3190,
+    "prizes": [
+     {
+      "name": "£100 Cash",
+      "value": 100,
+      "qty": 5,
+      "found": 0
+     },
+     {
+      "name": "£75 Cash",
+      "value": 75,
+      "qty": 6,
+      "found": 0
+     },
+     {
+      "name": "£50 Cash",
+      "value": 50,
+      "qty": 7,
+      "found": 1
+     },
+     {
+      "name": "£40 Cash",
+      "value": 40,
+      "qty": 8,
+      "found": 0
+     },
+     {
+      "name": "£30 Cash",
+      "value": 30,
+      "qty": 9,
+      "found": 1
+     },
+     {
+      "name": "£20 Cash",
+      "value": 20,
+      "qty": 10,
+      "found": 1
+     },
+     {
+      "name": "£10 Cash",
+      "value": 10,
+      "qty": 20,
+      "found": 3
+     },
+     {
+      "name": "£5 Cash",
+      "value": 5,
+      "qty": 100,
+      "found": 14
+     },
+     {
+      "name": "£0.20 Cash",
+      "value": 0.2,
+      "qty": 2000,
+      "found": 326
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 4999.900000000001,
+    "iwPoolValue": 3190,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 69.55,
+    "rtpWithEnd": 76.15
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 4205.3,
+    "rtpIwOnly": 69.55,
+    "soldPct": 15.89
+   },
+   "firstSeen": "2026-10-09T09:44:36.608Z"
   },
   {
    "id": "carley:hollys-barrel-smash-win-up-to-ps1250-instantly",
    "siteKey": "carley",
    "title": "HOLLY’S BARREL SMASH! 💥 WIN UP TO £1,250 INSTANTLY!",
-   "url": "https://carleycomps.co.uk/competition/hollys-barrel-smash-win-up-to-ps1250-instantly",
+   "url": "https://carleycomps.co.uk/competition/hollys-barrel-smash-win-up-to-ps1250-instantly?fbclid=IwZXh0bgNhZW0BMABwZG9mBWFkaWQBqzqwEJ6J-3NydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABH8AtfZGxzHJq5ZTd8jw1ukkPZOPuHcuJEhC4NxTGE3YNb2RuzcClRjblanE7_aem_k7CKJcLUJfdCpKEU6xNwvQ&utm_medium=paid&utm_source=fb&utm_id=120253810718940683&utm_content=120254342826490683&utm_term=120253810718930683&utm_campaign=120253810718940683",
    "price": 0.08,
    "totalTickets": 899999,
-   "ticketsSold": 88082,
+   "ticketsSold": 88238,
    "maxPerPerson": 89999,
    "closesAt": "2026-11-27T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 33280,
-    "claimed": 3304,
-    "remaining": 29976,
-    "remainingValue": 35192.8,
+    "claimed": 3309,
+    "remaining": 29971,
+    "remainingValue": 35191.8,
     "totalValue": 41150,
     "prizes": [
      {
@@ -700,7 +870,7 @@
       "name": "20P CASH",
       "value": 0.2,
       "qty": 25000,
-      "found": 2456
+      "found": 2461
      }
     ],
     "exact": true
@@ -710,173 +880,27 @@
     "selloutRevenue": 71999.92,
     "iwPoolValue": 41150,
     "endPrizeValue": 0,
-    "rtpIwOnly": 54.18,
-    "rtpWithEnd": 54.25
+    "rtpIwOnly": 54.19,
+    "rtpWithEnd": 54.26
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 64953.36,
-    "rtpIwOnly": 54.18,
-    "soldPct": 9.79
+    "buyoutCost": 64940.88,
+    "rtpIwOnly": 54.19,
+    "soldPct": 9.8
    },
    "firstSeen": "2026-10-15T20:26:48.410Z"
   },
   {
-   "id": "carley:something-smells-fishy-win-up-to-ps1000-instantly-2",
+   "id": "carley:bb-hollys-barrel-smash",
    "siteKey": "carley",
-   "title": "🐟 Something Smells Fishy! 💸 Win Up To £1000 Instantly!",
-   "url": "https://carleycomps.co.uk/competition/something-smells-fishy-win-up-to-ps1000-instantly-2",
-   "price": 0.45,
-   "totalTickets": 26999,
-   "ticketsSold": 19854,
-   "maxPerPerson": 5000,
-   "closesAt": "2026-11-30T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 2019,
-    "claimed": 1509,
-    "remaining": 510,
-    "remainingValue": 2106,
-    "totalValue": 8300,
-    "prizes": [
-     {
-      "name": "£1000 CASH",
-      "value": 1000,
-      "qty": 3,
-      "found": 2
-     },
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 5,
-      "found": 4
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 5,
-      "found": 5
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 6,
-      "found": 4
-     },
-     {
-      "name": "£1 CASH",
-      "value": 1,
-      "qty": 2000,
-      "found": 1494
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 12149.550000000001,
-    "iwPoolValue": 8300,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 65.5,
-    "rtpWithEnd": 65.91
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 3215.25,
-    "rtpIwOnly": 65.5,
-    "soldPct": 73.54
-   },
-   "firstSeen": "2026-10-16T06:24:24.033Z"
-  },
-  {
-   "id": "carley:the-domino-dash-win-up-to-ps1500-instantly",
-   "siteKey": "carley",
-   "title": "🎲 THE DOMINO DASH – WIN UP TO £1,500 INSTANTLY",
-   "url": "https://carleycomps.co.uk/competition/the-domino-dash-win-up-to-ps1500-instantly",
-   "price": 0.09,
-   "totalTickets": 219999,
-   "ticketsSold": 0,
-   "maxPerPerson": 21999,
-   "closesAt": "2026-12-07T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 6493,
-    "claimed": 0,
-    "remaining": 6493,
-    "remainingValue": 13050,
-    "totalValue": 13050,
-    "prizes": [
-     {
-      "name": "£1,500 CASH",
-      "value": 1500,
-      "qty": 3,
-      "found": 0
-     },
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 4,
-      "found": 0
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 5,
-      "found": 0
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 6,
-      "found": 0
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 75,
-      "found": 0
-     },
-     {
-      "name": "£5 CASH",
-      "value": 5,
-      "qty": 400,
-      "found": 0
-     },
-     {
-      "name": "£0.50 CASH",
-      "value": 0.5,
-      "qty": 6000,
-      "found": 0
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 19799.91,
-    "iwPoolValue": 13050,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 65.91,
-    "rtpWithEnd": 61.69
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 19799.91,
-    "rtpIwOnly": 65.91,
-    "soldPct": 0
-   },
-   "firstSeen": "2026-11-10T00:53:41.328Z"
-  },
-  {
-   "id": "carley:ps50-amazon-voucher",
-   "siteKey": "carley",
-   "title": "£50 AMAZON VOUCHER",
-   "url": "https://carleycomps.co.uk/competition/ps50-amazon-voucher",
-   "price": 0.04,
-   "totalTickets": 2500,
-   "ticketsSold": 117,
-   "maxPerPerson": 250,
-   "closesAt": "2026-11-17T18:00:00+00:00",
+   "title": "BB- HOLLY’S BARREL SMASH! 💥",
+   "url": "https://carleycomps.co.uk/competition/bb-hollys-barrel-smash",
+   "price": 0.01,
+   "totalTickets": 899999,
+   "ticketsSold": 47932,
+   "maxPerPerson": 89999,
+   "closesAt": "2026-11-27T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 0,
@@ -889,7 +913,7 @@
    },
    "structure": {
     "exact": true,
-    "selloutRevenue": 100,
+    "selloutRevenue": 8999.99,
     "iwPoolValue": 0,
     "endPrizeValue": 0,
     "rtpIwOnly": 0,
@@ -897,11 +921,11 @@
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 95.32,
+    "buyoutCost": 8520.67,
     "rtpIwOnly": 0,
-    "soldPct": 4.68
+    "soldPct": 5.33
    },
-   "firstSeen": "2026-11-05T21:36:39.914Z"
+   "firstSeen": "2026-10-15T20:26:48.410Z"
   },
   {
    "id": "carley:drop-spin-win-maybe-win-up-to-ps500-instantly",
@@ -910,15 +934,15 @@
    "url": "https://carleycomps.co.uk/competition/drop-spin-win-maybe-win-up-to-ps500-instantly",
    "price": 0.16,
    "totalTickets": 99999,
-   "ticketsSold": 6590,
+   "ticketsSold": 6685,
    "maxPerPerson": 9999,
    "closesAt": "2026-12-11T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 1108,
-    "claimed": 73,
-    "remaining": 1035,
-    "remainingValue": 8505,
+    "claimed": 75,
+    "remaining": 1033,
+    "remainingValue": 8503,
     "totalValue": 9500,
     "prizes": [
      {
@@ -997,7 +1021,7 @@
       "name": "£1 CASH",
       "value": 1,
       "qty": 1000,
-      "found": 65
+      "found": 67
      }
     ],
     "exact": true
@@ -1007,52 +1031,16 @@
     "selloutRevenue": 15999.84,
     "iwPoolValue": 9500,
     "endPrizeValue": 0,
-    "rtpIwOnly": 56.91,
-    "rtpWithEnd": 65.04
+    "rtpIwOnly": 56.95,
+    "rtpWithEnd": 65.08
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 14945.44,
-    "rtpIwOnly": 56.91,
-    "soldPct": 6.59
+    "buyoutCost": 14930.24,
+    "rtpIwOnly": 56.95,
+    "soldPct": 6.69
    },
    "firstSeen": "2026-11-01T15:20:22.674Z"
-  },
-  {
-   "id": "carley:bb-hollys-barrel-smash",
-   "siteKey": "carley",
-   "title": "BB- HOLLY’S BARREL SMASH! 💥",
-   "url": "https://carleycomps.co.uk/competition/bb-hollys-barrel-smash",
-   "price": 0.01,
-   "totalTickets": 899999,
-   "ticketsSold": 47932,
-   "maxPerPerson": 89999,
-   "closesAt": "2026-11-27T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 0,
-    "claimed": 0,
-    "remaining": 0,
-    "remainingValue": 0,
-    "totalValue": 0,
-    "prizes": [],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 8999.99,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 0,
-    "rtpWithEnd": 0
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 8520.67,
-    "rtpIwOnly": 0,
-    "soldPct": 5.33
-   },
-   "firstSeen": "2026-10-15T20:26:48.410Z"
   },
   {
    "id": "carley:the-cash-drop-ps100-edition",
@@ -1061,7 +1049,7 @@
    "url": "https://carleycomps.co.uk/competition/the-cash-drop-ps100-edition",
    "price": 0.02,
    "totalTickets": 249999,
-   "ticketsSold": 74465,
+   "ticketsSold": 74476,
    "maxPerPerson": 24999,
    "closesAt": "2026-12-14T18:00:00+00:00",
    "endPrize": null,
@@ -1086,16 +1074,52 @@
     "selloutRevenue": 4999.9800000000005,
     "iwPoolValue": 3200,
     "endPrizeValue": 0,
-    "rtpIwOnly": 65.51,
-    "rtpWithEnd": 68.51
+    "rtpIwOnly": 65.52,
+    "rtpWithEnd": 68.52
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 3510.68,
-    "rtpIwOnly": 65.51,
+    "buyoutCost": 3510.46,
+    "rtpIwOnly": 65.52,
     "soldPct": 29.79
    },
    "firstSeen": "2026-11-01T08:10:48.989Z"
+  },
+  {
+   "id": "carley:ps50-amazon-voucher",
+   "siteKey": "carley",
+   "title": "£50 AMAZON VOUCHER",
+   "url": "https://carleycomps.co.uk/competition/ps50-amazon-voucher",
+   "price": 0.04,
+   "totalTickets": 2500,
+   "ticketsSold": 146,
+   "maxPerPerson": 250,
+   "closesAt": "2026-11-17T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 0,
+    "claimed": 0,
+    "remaining": 0,
+    "remainingValue": 0,
+    "totalValue": 0,
+    "prizes": [],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 100,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 0,
+    "rtpWithEnd": 0
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 94.16,
+    "rtpIwOnly": 0,
+    "soldPct": 5.84
+   },
+   "firstSeen": "2026-11-05T21:36:39.914Z"
   },
   {
    "id": "carley:every-ticket-wins-every-time-etiaw-6",
@@ -1201,15 +1225,15 @@
    "url": "https://carleycomps.co.uk/competition/angel-numbers-win-up-to-ps1212-instantly",
    "price": 0.12,
    "totalTickets": 549999,
-   "ticketsSold": 20104,
+   "ticketsSold": 20166,
    "maxPerPerson": 54999,
    "closesAt": "2026-12-11T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 10253,
-    "claimed": 379,
-    "remaining": 9874,
-    "remainingValue": 43727.08,
+    "claimed": 381,
+    "remaining": 9872,
+    "remainingValue": 43726.86,
     "totalValue": 45346,
     "prizes": [
      {
@@ -1288,7 +1312,7 @@
       "name": "£0.11 CASH",
       "value": 0.11,
       "qty": 10000,
-      "found": 372
+      "found": 374
      }
     ],
     "exact": true
@@ -1299,13 +1323,13 @@
     "iwPoolValue": 45346,
     "endPrizeValue": 0,
     "rtpIwOnly": 68.77,
-    "rtpWithEnd": 68.84
+    "rtpWithEnd": 68.85
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 63587.4,
+    "buyoutCost": 63579.96,
     "rtpIwOnly": 68.77,
-    "soldPct": 3.66
+    "soldPct": 3.67
    },
    "firstSeen": "2026-10-26T07:00:02.089Z"
   },
@@ -1316,15 +1340,15 @@
    "url": "https://carleycomps.co.uk/competition/scary-fucker-pop-win-up-to-ps66666-instantly",
    "price": 0.06,
    "totalTickets": 269999,
-   "ticketsSold": 117135,
+   "ticketsSold": 117375,
    "maxPerPerson": 26999,
    "closesAt": "2026-11-16T21:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 4444,
-    "claimed": 1900,
-    "remaining": 2544,
-    "remainingValue": 6017.04,
+    "claimed": 1905,
+    "remaining": 2539,
+    "remainingValue": 6007.74,
     "totalValue": 10637.04,
     "prizes": [
      {
@@ -1343,13 +1367,13 @@
       "name": "👻£6.66 CASH🎈",
       "value": 6.66,
       "qty": 400,
-      "found": 175
+      "found": 176
      },
      {
       "name": "🦇£0.66 CASH🎈",
       "value": 0.66,
       "qty": 4000,
-      "found": 1699
+      "found": 1703
      }
     ],
     "exact": true
@@ -1359,59 +1383,16 @@
     "selloutRevenue": 16199.939999999999,
     "iwPoolValue": 10637.04,
     "endPrizeValue": 0,
-    "rtpIwOnly": 65.6,
-    "rtpWithEnd": 70.48
+    "rtpIwOnly": 65.61,
+    "rtpWithEnd": 70.49
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 9171.84,
-    "rtpIwOnly": 65.6,
-    "soldPct": 43.38
+    "buyoutCost": 9157.44,
+    "rtpIwOnly": 65.61,
+    "soldPct": 43.47
    },
    "firstSeen": "2026-09-30T05:18:18.680Z"
-  },
-  {
-   "id": "carley:monkey-business-ps500-or-nothing",
-   "siteKey": "carley",
-   "title": "🐒 Monkey Business: £500 or Nothing! 🍌💰",
-   "url": "https://carleycomps.co.uk/competition/monkey-business-ps500-or-nothing",
-   "price": 0.03,
-   "totalTickets": 899999,
-   "ticketsSold": 156525,
-   "maxPerPerson": 89999,
-   "closesAt": "2026-11-23T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 40,
-    "claimed": 7,
-    "remaining": 33,
-    "remainingValue": 16500,
-    "totalValue": 20000,
-    "prizes": [
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 40,
-      "found": 7
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 26999.969999999998,
-    "iwPoolValue": 20000,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 73.98,
-    "rtpWithEnd": 74.16
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 22304.22,
-    "rtpIwOnly": 73.98,
-    "soldPct": 17.39
-   },
-   "firstSeen": "2026-10-12T09:32:12.866Z"
   },
   {
    "id": "carley:chloes-cucumber-calculations-win-up-to-ps78932-instantly",
@@ -1420,7 +1401,7 @@
    "url": "https://carleycomps.co.uk/competition/chloes-cucumber-calculations-win-up-to-ps78932-instantly",
    "price": 0.04,
    "totalTickets": 369999,
-   "ticketsSold": 15816,
+   "ticketsSold": 16304,
    "maxPerPerson": 36999,
    "closesAt": "2026-12-18T08:00:00+00:00",
    "endPrize": null,
@@ -1589,14 +1570,14 @@
     "selloutRevenue": 14799.960000000001,
     "iwPoolValue": 9957,
     "endPrizeValue": 0,
-    "rtpIwOnly": 68.11,
-    "rtpWithEnd": 135.72
+    "rtpIwOnly": 68.2,
+    "rtpWithEnd": 135.82
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 14167.32,
-    "rtpIwOnly": 68.11,
-    "soldPct": 4.27
+    "buyoutCost": 14147.8,
+    "rtpIwOnly": 68.2,
+    "soldPct": 4.41
    },
    "firstSeen": "2026-11-13T17:25:24.790Z"
   },
@@ -1607,15 +1588,15 @@
    "url": "https://carleycomps.co.uk/competition/13-things-every-brit-has-in-their-house",
    "price": 0.06,
    "totalTickets": 999999,
-   "ticketsSold": 63328,
+   "ticketsSold": 63368,
    "maxPerPerson": 99999,
    "closesAt": "2026-11-20T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 8986,
-    "claimed": 552,
-    "remaining": 8434,
-    "remainingValue": 37059.25,
+    "claimed": 553,
+    "remaining": 8433,
+    "remainingValue": 37059,
     "totalValue": 39875,
     "prizes": [
      {
@@ -1694,7 +1675,7 @@
       "name": "Sauce 🍅",
       "value": 0.25,
       "qty": 7500,
-      "found": 463
+      "found": 464
      }
     ],
     "exact": true
@@ -1705,58 +1686,58 @@
     "iwPoolValue": 39875,
     "endPrizeValue": 0,
     "rtpIwOnly": 65.94,
-    "rtpWithEnd": 66.02
+    "rtpWithEnd": 66.03
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 56200.26,
+    "buyoutCost": 56197.86,
     "rtpIwOnly": 65.94,
-    "soldPct": 6.33
+    "soldPct": 6.34
    },
    "firstSeen": "2026-10-09T09:44:36.608Z"
   },
   {
-   "id": "carley:the-ps10-grand-skydive-slam",
+   "id": "carley:monkey-business-ps500-or-nothing",
    "siteKey": "carley",
-   "title": "THE £10 GRAND SKYDIVE SLAM! 💷🪂🔥",
-   "url": "https://carleycomps.co.uk/competition/the-ps10-grand-skydive-slam",
-   "price": 0.09,
-   "totalTickets": 169999,
-   "ticketsSold": 8527,
-   "maxPerPerson": 16999,
-   "closesAt": "2026-12-21T18:00:00+00:00",
+   "title": "🐒 Monkey Business: £500 or Nothing! 🍌💰",
+   "url": "https://carleycomps.co.uk/competition/monkey-business-ps500-or-nothing",
+   "price": 0.03,
+   "totalTickets": 899999,
+   "ticketsSold": 156595,
+   "maxPerPerson": 89999,
+   "closesAt": "2026-11-23T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
-    "total": 10,
-    "claimed": 1,
-    "remaining": 9,
-    "remainingValue": 9000,
-    "totalValue": 10000,
+    "total": 40,
+    "claimed": 7,
+    "remaining": 33,
+    "remainingValue": 16500,
+    "totalValue": 20000,
     "prizes": [
      {
-      "name": "£1000 CASH",
-      "value": 1000,
-      "qty": 10,
-      "found": 1
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 40,
+      "found": 7
      }
     ],
     "exact": true
    },
    "structure": {
     "exact": true,
-    "selloutRevenue": 15299.91,
-    "iwPoolValue": 10000,
+    "selloutRevenue": 26999.969999999998,
+    "iwPoolValue": 20000,
     "endPrizeValue": 0,
-    "rtpIwOnly": 61.93,
-    "rtpWithEnd": 68.47
+    "rtpIwOnly": 73.98,
+    "rtpWithEnd": 74.17
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 14532.48,
-    "rtpIwOnly": 61.93,
-    "soldPct": 5.02
+    "buyoutCost": 22302.12,
+    "rtpIwOnly": 73.98,
+    "soldPct": 17.4
    },
-   "firstSeen": "2026-11-09T17:23:35.685Z"
+   "firstSeen": "2026-10-12T09:32:12.866Z"
   },
   {
    "id": "carley:bangers-bingo-win-up-to-ps2500-instantly-ps800-end-prize",
@@ -1765,7 +1746,7 @@
    "url": "https://carleycomps.co.uk/competition/bangers-bingo-win-up-to-ps2500-instantly-ps800-end-prize",
    "price": 0.25,
    "totalTickets": 499999,
-   "ticketsSold": 192760,
+   "ticketsSold": 192771,
    "maxPerPerson": 49999,
    "closesAt": "2026-11-23T18:00:00+00:00",
    "endPrize": null,
@@ -1903,11 +1884,54 @@
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 76809.75,
+    "buyoutCost": 76807,
     "rtpIwOnly": 56.49,
     "soldPct": 38.55
    },
    "firstSeen": "2026-10-12T09:32:12.866Z"
+  },
+  {
+   "id": "carley:the-ps10-grand-skydive-slam",
+   "siteKey": "carley",
+   "title": "THE £10 GRAND SKYDIVE SLAM! 💷🪂🔥",
+   "url": "https://carleycomps.co.uk/competition/the-ps10-grand-skydive-slam",
+   "price": 0.09,
+   "totalTickets": 169999,
+   "ticketsSold": 8681,
+   "maxPerPerson": 16999,
+   "closesAt": "2026-12-21T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 10,
+    "claimed": 1,
+    "remaining": 9,
+    "remainingValue": 9000,
+    "totalValue": 10000,
+    "prizes": [
+     {
+      "name": "£1000 CASH",
+      "value": 1000,
+      "qty": 10,
+      "found": 1
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 15299.91,
+    "iwPoolValue": 10000,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 61.99,
+    "rtpWithEnd": 68.53
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 14518.62,
+    "rtpIwOnly": 61.99,
+    "soldPct": 5.11
+   },
+   "firstSeen": "2026-11-09T17:23:35.685Z"
   },
   {
    "id": "carley:the-case-of-the-ps500-mystery",
@@ -1916,58 +1940,58 @@
    "url": "https://carleycomps.co.uk/competition/the-case-of-the-ps500-mystery",
    "price": 0.04,
    "totalTickets": 329999,
-   "ticketsSold": 21047,
+   "ticketsSold": 21279,
    "maxPerPerson": 32999,
    "closesAt": "2026-12-18T08:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 1172,
-    "claimed": 72,
-    "remaining": 1100,
-    "remainingValue": 8026,
-    "totalValue": 8375,
+    "claimed": 73,
+    "remaining": 1099,
+    "remainingValue": 0,
+    "totalValue": 0,
     "prizes": [
      {
       "name": "The Missing Molly (£500)",
-      "value": 500,
+      "value": 0,
       "qty": 5,
       "found": 0
      },
      {
       "name": "Sherlock's Secret Stash (£250)",
-      "value": 250,
+      "value": 0,
       "qty": 7,
       "found": 0
      },
      {
       "name": "The Baker Street Bonus (£100)",
-      "value": 100,
+      "value": 0,
       "qty": 10,
       "found": 2
      },
      {
       "name": "The Mystery Millionaire (£50)",
-      "value": 50,
+      "value": 0,
       "qty": 25,
       "found": 1
      },
      {
       "name": "The Case of the Cash (£10)",
-      "value": 10,
+      "value": 0,
       "qty": 50,
       "found": 2
      },
      {
       "name": "Watson's Winning Clue (£5)",
-      "value": 5,
+      "value": 0,
       "qty": 75,
       "found": 3
      },
      {
       "name": "The Final Investigation (£1)",
-      "value": 1,
+      "value": 0,
       "qty": 1000,
-      "found": 64
+      "found": 65
      }
     ],
     "exact": true
@@ -1975,18 +1999,121 @@
    "structure": {
     "exact": true,
     "selloutRevenue": 13199.960000000001,
-    "iwPoolValue": 8375,
+    "iwPoolValue": 0,
     "endPrizeValue": 0,
-    "rtpIwOnly": 64.95,
+    "rtpIwOnly": 0,
     "rtpWithEnd": 0
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 12358.08,
-    "rtpIwOnly": 64.95,
-    "soldPct": 6.38
+    "buyoutCost": 12348.8,
+    "rtpIwOnly": 0,
+    "soldPct": 6.45
    },
    "firstSeen": "2026-11-13T09:24:27.962Z"
+  },
+  {
+   "id": "carley:something-smells-fishy-win-up-to-ps1000-instantly-2",
+   "siteKey": "carley",
+   "title": "🐟 Something Smells Fishy! 💸 Win Up To £1000 Instantly!",
+   "url": "https://carleycomps.co.uk/competition/something-smells-fishy-win-up-to-ps1000-instantly-2",
+   "price": 0.45,
+   "totalTickets": 26999,
+   "ticketsSold": 19857,
+   "maxPerPerson": 5000,
+   "closesAt": "2026-11-30T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 2019,
+    "claimed": 1510,
+    "remaining": 509,
+    "remainingValue": 2105,
+    "totalValue": 8300,
+    "prizes": [
+     {
+      "name": "£1000 CASH",
+      "value": 1000,
+      "qty": 3,
+      "found": 2
+     },
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 5,
+      "found": 4
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 5,
+      "found": 5
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 6,
+      "found": 4
+     },
+     {
+      "name": "£1 CASH",
+      "value": 1,
+      "qty": 2000,
+      "found": 1495
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 12149.550000000001,
+    "iwPoolValue": 8300,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 65.5,
+    "rtpWithEnd": 65.91
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 3213.9,
+    "rtpIwOnly": 65.5,
+    "soldPct": 73.55
+   },
+   "firstSeen": "2026-10-16T06:24:24.033Z"
+  },
+  {
+   "id": "carley:ps100-carley-comps-credit",
+   "siteKey": "carley",
+   "title": "£100 CARLEY COMPS CREDIT",
+   "url": "https://carleycomps.co.uk/competition/ps100-carley-comps-credit",
+   "price": 0.02,
+   "totalTickets": 9999,
+   "ticketsSold": 1065,
+   "maxPerPerson": 999,
+   "closesAt": "2026-11-30T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 0,
+    "claimed": 0,
+    "remaining": 0,
+    "remainingValue": 0,
+    "totalValue": 0,
+    "prizes": [],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 199.98000000000002,
+    "iwPoolValue": 0,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 0,
+    "rtpWithEnd": 0
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 178.68,
+    "rtpIwOnly": 0,
+    "soldPct": 10.65
+   },
+   "firstSeen": "2026-11-01T15:20:22.674Z"
   },
   {
    "id": "carley:disco-plinko-win-up-to-ps250",
@@ -1995,15 +2122,15 @@
    "url": "https://carleycomps.co.uk/competition/disco-plinko-win-up-to-ps250",
    "price": 0.09,
    "totalTickets": 99999,
-   "ticketsSold": 9625,
+   "ticketsSold": 9645,
    "maxPerPerson": 9999,
    "closesAt": "2026-12-04T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 1168,
-    "claimed": 96,
-    "remaining": 1072,
-    "remainingValue": 4856,
+    "claimed": 97,
+    "remaining": 1071,
+    "remainingValue": 4855,
     "totalValue": 5300,
     "prizes": [
      {
@@ -2046,7 +2173,7 @@
       "name": "🎵£1 CASH💫",
       "value": 1,
       "qty": 1000,
-      "found": 84
+      "found": 85
      }
     ],
     "exact": true
@@ -2061,47 +2188,11 @@
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 8133.66,
+    "buyoutCost": 8131.86,
     "rtpIwOnly": 59.7,
-    "soldPct": 9.63
+    "soldPct": 9.65
    },
    "firstSeen": "2026-10-19T07:38:28.516Z"
-  },
-  {
-   "id": "carley:ps100-carley-comps-credit",
-   "siteKey": "carley",
-   "title": "£100 CARLEY COMPS CREDIT",
-   "url": "https://carleycomps.co.uk/competition/ps100-carley-comps-credit",
-   "price": 0.02,
-   "totalTickets": 9999,
-   "ticketsSold": 1057,
-   "maxPerPerson": 999,
-   "closesAt": "2026-11-30T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 0,
-    "claimed": 0,
-    "remaining": 0,
-    "remainingValue": 0,
-    "totalValue": 0,
-    "prizes": [],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 199.98000000000002,
-    "iwPoolValue": 0,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 0,
-    "rtpWithEnd": 0
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 178.84,
-    "rtpIwOnly": 0,
-    "soldPct": 10.57
-   },
-   "firstSeen": "2026-11-01T15:20:22.674Z"
   },
   {
    "id": "carley:ps100-fortnite-gift-card",
@@ -2140,6 +2231,85 @@
    "firstSeen": "2026-11-01T15:20:22.674Z"
   },
   {
+   "id": "carley:the-bushtucker-trials-win-up-to-ps1500",
+   "siteKey": "carley",
+   "title": "THE BUSHTUCKER TRIALS - WIN UP TO £1500",
+   "url": "https://carleycomps.co.uk/competition/the-bushtucker-trials-win-up-to-ps1500",
+   "price": 0.09,
+   "totalTickets": 199999,
+   "ticketsSold": 99080,
+   "maxPerPerson": 19999,
+   "closesAt": "2026-12-21T18:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 6493,
+    "claimed": 3210,
+    "remaining": 3283,
+    "remainingValue": 4704,
+    "totalValue": 10050,
+    "prizes": [
+     {
+      "name": "£1,500 CASH",
+      "value": 500,
+      "qty": 3,
+      "found": 2
+     },
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 4,
+      "found": 2
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 5,
+      "found": 4
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 6,
+      "found": 3
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 75,
+      "found": 26
+     },
+     {
+      "name": "£5 CASH",
+      "value": 5,
+      "qty": 400,
+      "found": 211
+     },
+     {
+      "name": "£0.50 CASH",
+      "value": 0.5,
+      "qty": 6000,
+      "found": 2962
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 17999.91,
+    "iwPoolValue": 10050,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 51.79,
+    "rtpWithEnd": 63.82
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 9082.71,
+    "rtpIwOnly": 51.79,
+    "soldPct": 49.54
+   },
+   "firstSeen": "2026-11-09T17:23:35.685Z"
+  },
+  {
    "id": "carley:ps100-amazon-gift-card",
    "siteKey": "carley",
    "title": "£100 AMAZON GIFT CARD",
@@ -2174,6 +2344,85 @@
     "soldPct": 10.84
    },
    "firstSeen": "2026-11-01T15:20:22.674Z"
+  },
+  {
+   "id": "carley:the-game-definitely-not-inspired-by-pac-man",
+   "siteKey": "carley",
+   "title": "🎮 THE GAME 👀 DEFINITELY NOT INSPIRED BY PAC-MAN 🟡💨",
+   "url": "https://carleycomps.co.uk/competition/the-game-definitely-not-inspired-by-pac-man",
+   "price": 0.09,
+   "totalTickets": 199999,
+   "ticketsSold": 55426,
+   "maxPerPerson": 19999,
+   "closesAt": "2026-12-11T21:00:00+00:00",
+   "endPrize": null,
+   "instantWins": {
+    "total": 6493,
+    "claimed": 1905,
+    "remaining": 4588,
+    "remainingValue": 6418.5,
+    "totalValue": 10050,
+    "prizes": [
+     {
+      "name": "£1,500 CASH",
+      "value": 500,
+      "qty": 3,
+      "found": 1
+     },
+     {
+      "name": "£500 CASH",
+      "value": 500,
+      "qty": 4,
+      "found": 2
+     },
+     {
+      "name": "£100 CASH",
+      "value": 100,
+      "qty": 5,
+      "found": 3
+     },
+     {
+      "name": "£50 CASH",
+      "value": 50,
+      "qty": 6,
+      "found": 3
+     },
+     {
+      "name": "£10 CASH",
+      "value": 10,
+      "qty": 75,
+      "found": 18
+     },
+     {
+      "name": "£5 CASH",
+      "value": 5,
+      "qty": 400,
+      "found": 125
+     },
+     {
+      "name": "£0.50 CASH",
+      "value": 0.5,
+      "qty": 6000,
+      "found": 1753
+     }
+    ],
+    "exact": true
+   },
+   "structure": {
+    "exact": true,
+    "selloutRevenue": 17999.91,
+    "iwPoolValue": 10050,
+    "endPrizeValue": 0,
+    "rtpIwOnly": 49.33,
+    "rtpWithEnd": 49.61
+   },
+   "source": {
+    "type": "supabase",
+    "buyoutCost": 13011.57,
+    "rtpIwOnly": 49.33,
+    "soldPct": 27.71
+   },
+   "firstSeen": "2026-10-30T13:36:45.865Z"
   },
   {
    "id": "carley:slap-ya-babydaddy-win-up-to-ps250-instantly-new",
@@ -2229,85 +2478,6 @@
     "soldPct": 12.94
    },
    "firstSeen": "2026-10-26T07:00:02.089Z"
-  },
-  {
-   "id": "carley:the-game-definitely-not-inspired-by-pac-man",
-   "siteKey": "carley",
-   "title": "🎮 THE GAME 👀 DEFINITELY NOT INSPIRED BY PAC-MAN 🟡💨",
-   "url": "https://carleycomps.co.uk/competition/the-game-definitely-not-inspired-by-pac-man",
-   "price": 0.09,
-   "totalTickets": 199999,
-   "ticketsSold": 55063,
-   "maxPerPerson": 19999,
-   "closesAt": "2026-12-11T21:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 6493,
-    "claimed": 1894,
-    "remaining": 4599,
-    "remainingValue": 6428.5,
-    "totalValue": 10050,
-    "prizes": [
-     {
-      "name": "£1,500 CASH",
-      "value": 500,
-      "qty": 3,
-      "found": 1
-     },
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 4,
-      "found": 2
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 5,
-      "found": 3
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 6,
-      "found": 3
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 75,
-      "found": 18
-     },
-     {
-      "name": "£5 CASH",
-      "value": 5,
-      "qty": 400,
-      "found": 124
-     },
-     {
-      "name": "£0.50 CASH",
-      "value": 0.5,
-      "qty": 6000,
-      "found": 1743
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 17999.91,
-    "iwPoolValue": 10050,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 49.28,
-    "rtpWithEnd": 49.56
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 13044.24,
-    "rtpIwOnly": 49.28,
-    "soldPct": 27.53
-   },
-   "firstSeen": "2026-10-30T13:36:45.865Z"
   },
   {
    "id": "carley:domino",
@@ -2389,100 +2559,21 @@
    "firstSeen": "2026-11-10T00:53:41.328Z"
   },
   {
-   "id": "carley:the-bushtucker-trials-win-up-to-ps1500",
-   "siteKey": "carley",
-   "title": "THE BUSHTUCKER TRIALS - WIN UP TO £1500",
-   "url": "https://carleycomps.co.uk/competition/the-bushtucker-trials-win-up-to-ps1500",
-   "price": 0.09,
-   "totalTickets": 199999,
-   "ticketsSold": 98918,
-   "maxPerPerson": 19999,
-   "closesAt": "2026-12-21T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 6493,
-    "claimed": 3202,
-    "remaining": 3291,
-    "remainingValue": 4712.5,
-    "totalValue": 10050,
-    "prizes": [
-     {
-      "name": "£1,500 CASH",
-      "value": 500,
-      "qty": 3,
-      "found": 2
-     },
-     {
-      "name": "£500 CASH",
-      "value": 500,
-      "qty": 4,
-      "found": 2
-     },
-     {
-      "name": "£100 CASH",
-      "value": 100,
-      "qty": 5,
-      "found": 4
-     },
-     {
-      "name": "£50 CASH",
-      "value": 50,
-      "qty": 6,
-      "found": 3
-     },
-     {
-      "name": "£10 CASH",
-      "value": 10,
-      "qty": 75,
-      "found": 26
-     },
-     {
-      "name": "£5 CASH",
-      "value": 5,
-      "qty": 400,
-      "found": 210
-     },
-     {
-      "name": "£0.50 CASH",
-      "value": 0.5,
-      "qty": 6000,
-      "found": 2955
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 17999.91,
-    "iwPoolValue": 10050,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 51.8,
-    "rtpWithEnd": 63.83
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 9097.29,
-    "rtpIwOnly": 51.8,
-    "soldPct": 49.46
-   },
-   "firstSeen": "2026-11-09T17:23:35.685Z"
-  },
-  {
    "id": "carley:pimpin-6s-win-up-to-ps66666-instantly",
    "siteKey": "carley",
    "title": "🎰💋 PIMPIN 6'S WIN UP TO £666.66 INSTANTLY! 💎💰🔥",
    "url": "https://carleycomps.co.uk/competition/pimpin-6s-win-up-to-ps66666-instantly",
    "price": 0.03,
    "totalTickets": 169999,
-   "ticketsSold": 33031,
+   "ticketsSold": 33086,
    "maxPerPerson": 16999,
    "closesAt": "2026-11-18T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 1058,
-    "claimed": 202,
-    "remaining": 856,
-    "remainingValue": 3144.96,
+    "claimed": 203,
+    "remaining": 855,
+    "remainingValue": 3144.3,
     "totalValue": 3326.28,
     "prizes": [
      {
@@ -2507,7 +2598,7 @@
       "name": "£0.66 CASH",
       "value": 0.66,
       "qty": 1000,
-      "found": 194
+      "found": 195
      }
     ],
     "exact": true
@@ -2517,14 +2608,14 @@
     "selloutRevenue": 5099.97,
     "iwPoolValue": 3326.28,
     "endPrizeValue": 0,
-    "rtpIwOnly": 76.54,
-    "rtpWithEnd": 92.04
+    "rtpIwOnly": 76.55,
+    "rtpWithEnd": 92.06
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 4109.04,
-    "rtpIwOnly": 76.54,
-    "soldPct": 19.43
+    "buyoutCost": 4107.39,
+    "rtpIwOnly": 76.55,
+    "soldPct": 19.46
    },
    "firstSeen": "2026-11-05T21:36:39.914Z"
   },
@@ -2535,15 +2626,15 @@
    "url": "https://carleycomps.co.uk/competition/wynns-simple-slots-win-up-to-ps60-instantly",
    "price": 0.1,
    "totalTickets": 21999,
-   "ticketsSold": 4842,
+   "ticketsSold": 4852,
    "maxPerPerson": 2199,
    "closesAt": "2026-12-18T18:00:00+00:00",
    "endPrize": null,
    "instantWins": {
     "total": 599,
-    "claimed": 131,
-    "remaining": 468,
-    "remainingValue": 962.8,
+    "claimed": 132,
+    "remaining": 467,
+    "remainingValue": 962.6,
     "totalValue": 1390,
     "prizes": [
      {
@@ -2598,7 +2689,7 @@
       "name": "£0.20 CASH",
       "value": 0.2,
       "qty": 500,
-      "found": 106
+      "found": 107
      }
     ],
     "exact": true
@@ -2608,14 +2699,14 @@
     "selloutRevenue": 2199.9,
     "iwPoolValue": 1390,
     "endPrizeValue": 0,
-    "rtpIwOnly": 56.12,
-    "rtpWithEnd": 65.94
+    "rtpIwOnly": 56.14,
+    "rtpWithEnd": 65.97
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 1715.7,
-    "rtpIwOnly": 56.12,
-    "soldPct": 22.01
+    "buyoutCost": 1714.7,
+    "rtpIwOnly": 56.14,
+    "soldPct": 22.06
    },
    "firstSeen": "2026-11-01T15:20:22.674Z"
   },
@@ -2626,7 +2717,7 @@
    "url": "https://carleycomps.co.uk/competition/the-47-grand-slam-meerkat-edition-win-up-to-ps500-instantly",
    "price": 0.07,
    "totalTickets": 999999,
-   "ticketsSold": 20230,
+   "ticketsSold": 20368,
    "maxPerPerson": 9999,
    "closesAt": "2026-12-07T18:00:00+00:00",
    "endPrize": null,
@@ -2651,107 +2742,16 @@
     "selloutRevenue": 69999.93000000001,
     "iwPoolValue": 47000,
     "endPrizeValue": 0,
-    "rtpIwOnly": 66.34,
-    "rtpWithEnd": 67.13
+    "rtpIwOnly": 66.35,
+    "rtpWithEnd": 67.14
    },
    "source": {
     "type": "supabase",
-    "buyoutCost": 68583.83,
-    "rtpIwOnly": 66.34,
-    "soldPct": 2.02
+    "buyoutCost": 68574.17,
+    "rtpIwOnly": 66.35,
+    "soldPct": 2.04
    },
    "firstSeen": "2026-10-26T07:00:02.089Z"
-  },
-  {
-   "id": "carley:call-me-the-zookeeper-win-up-to-ps100-instantly",
-   "siteKey": "carley",
-   "title": "🦁🐯 CALL ME THE ZOOKEEPER! 🐍🦍 Win Up to £100 Instantly! 💰🔥",
-   "url": "https://carleycomps.co.uk/competition/call-me-the-zookeeper-win-up-to-ps100-instantly",
-   "price": 0.1,
-   "totalTickets": 49999,
-   "ticketsSold": 7934,
-   "maxPerPerson": 4999,
-   "closesAt": "2026-11-20T18:00:00+00:00",
-   "endPrize": null,
-   "instantWins": {
-    "total": 2165,
-    "claimed": 345,
-    "remaining": 1820,
-    "remainingValue": 2925,
-    "totalValue": 3190,
-    "prizes": [
-     {
-      "name": "£100 Cash",
-      "value": 100,
-      "qty": 5,
-      "found": 0
-     },
-     {
-      "name": "£75 Cash",
-      "value": 75,
-      "qty": 6,
-      "found": 0
-     },
-     {
-      "name": "£50 Cash",
-      "value": 50,
-      "qty": 7,
-      "found": 1
-     },
-     {
-      "name": "£40 Cash",
-      "value": 40,
-      "qty": 8,
-      "found": 0
-     },
-     {
-      "name": "£30 Cash",
-      "value": 30,
-      "qty": 9,
-      "found": 1
-     },
-     {
-      "name": "£20 Cash",
-      "value": 20,
-      "qty": 10,
-      "found": 1
-     },
-     {
-      "name": "£10 Cash",
-      "value": 10,
-      "qty": 20,
-      "found": 3
-     },
-     {
-      "name": "£5 Cash",
-      "value": 5,
-      "qty": 100,
-      "found": 14
-     },
-     {
-      "name": "£0.20 Cash",
-      "value": 0.2,
-      "qty": 2000,
-      "found": 325
-     }
-    ],
-    "exact": true
-   },
-   "structure": {
-    "exact": true,
-    "selloutRevenue": 4999.900000000001,
-    "iwPoolValue": 3190,
-    "endPrizeValue": 0,
-    "rtpIwOnly": 69.54,
-    "rtpWithEnd": 76.14
-   },
-   "source": {
-    "type": "supabase",
-    "buyoutCost": 4206.5,
-    "rtpIwOnly": 69.54,
-    "soldPct": 15.87
-   },
-   "firstSeen": "2026-10-09T09:44:36.608Z"
   },
   {
    "id": "redlemonx:higher-or-lower",
@@ -3848,7 +3848,7 @@
    "url": "https://kingofcomps.co.uk/competition/jimny-instants",
    "price": 3,
    "totalTickets": 305000,
-   "ticketsSold": 23083,
+   "ticketsSold": 23096,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -3914,7 +3914,7 @@
    "url": "https://kingofcomps.co.uk/competition/xmas-bank-loader",
    "price": 3,
    "totalTickets": 420000,
-   "ticketsSold": 149271,
+   "ticketsSold": 149635,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -4165,7 +4165,7 @@
    "url": "https://kingofcomps.co.uk/competition/pennywins-ps15000-of-prizes-for-a-penny-2",
    "price": 1,
    "totalTickets": 3200000,
-   "ticketsSold": 400558,
+   "ticketsSold": 406044,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -4291,7 +4291,7 @@
    "url": "https://kingofcomps.co.uk/competition/black-friday",
    "price": 2.7,
    "totalTickets": 163000,
-   "ticketsSold": 22323,
+   "ticketsSold": 22533,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -4483,7 +4483,7 @@
    "url": "https://kingofcomps.co.uk/competition/every-ticket-wins-23",
    "price": 2,
    "totalTickets": 12969,
-   "ticketsSold": 8363,
+   "ticketsSold": 8367,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": {
@@ -4774,7 +4774,7 @@
    "url": "https://kingofcomps.co.uk/competition/monday-money-monsters-4",
    "price": 2.5,
    "totalTickets": 7500,
-   "ticketsSold": 1052,
+   "ticketsSold": 1103,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
@@ -4896,7 +4896,7 @@
    "url": "https://kingofcomps.co.uk/competition/lots-of-little-wins-for-1p-7",
    "price": 2.5,
    "totalTickets": 1110000,
-   "ticketsSold": 634179,
+   "ticketsSold": 636257,
    "maxPerPerson": null,
    "closesAt": null,
    "endPrize": null,
